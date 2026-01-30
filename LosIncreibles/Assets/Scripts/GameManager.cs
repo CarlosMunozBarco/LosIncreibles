@@ -3,4 +3,64 @@ using UnityEngine;
 public class GameManager : MonoBehaviour
 {
 
+    private bool isPaused;
+    // creamos la instancia del GameManager solo de lectura y modificación privada
+    public static GameManager Instance {get; private set;}
+
+    void Awake()
+    {
+        // inializacion del gameManager (Singleton)
+        if (Instance == null)
+        {
+            Instance = this;
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
+    }
+    void Start()
+    {
+        // iniciamos en falso
+        isPaused = false;
+        // activamos el tiempo de juego a 1 = no esta pausado
+        Time.timeScale = 1f;
+        
+    }
+
+    /// <summary>
+    /// Metodo que pausa o despausa el juego
+    /// </summary>
+    private void StopGame()
+    {
+        // alterna el valor -> si es true pasa a falso, si es falso se vuelve true
+        isPaused = !isPaused;
+        // La escala de tiempo será 0 si esta pausado y 1 si no lo esta
+        // Variables ternarias -> cambiar el valor de una variable en base a una condicion
+        // variable = condicion ? valor si se cumple : valor si no se cumple
+        Time.timeScale = isPaused ? 0f : 1f;
+    }
+
+    public void PauseInput()
+    {
+        StopGame();
+        // muestra la interfaz de pausa
+        UIManager.Instance.TogglePauseUI(isPaused);
+    }
+    public void PlayerDeath()
+    {
+        UIManager.Instance.ActivateDefeatUI();
+        StopGame();
+    }
+
+    /// <summary>
+    /// Metodo que ejecutamos al terminar el juego (Victoria)
+    /// </summary>
+    public void EndGame()
+    {
+        // activmaos la interfaz de victoria
+        UIManager.Instance.ActivateVictoryUI();
+        // pausamos el juego
+        StopGame();
+    }
 }
