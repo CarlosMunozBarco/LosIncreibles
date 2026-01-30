@@ -5,8 +5,8 @@ using UnityEngine;
 public class TurnManager : MonoBehaviour
 {
     public Turn currentTurn;
-    public Player Player;
-    public List<Enemy> Enemies;
+    public Player player;
+    public List<Enemy> enemies;
 
     private int currentEnemyIndex = 0;
 
@@ -33,11 +33,11 @@ public class TurnManager : MonoBehaviour
     {
         if(currentTurn == Turn.Player)
         {
-            Player.StartTurn();
+            player.StartTurn();
         }
         else if (currentTurn == Turn.Enemy)
         {
-            Enemies[currentEnemyIndex].StartTurn();
+            enemies[currentEnemyIndex].StartTurn();
         }
     }
 
@@ -50,7 +50,7 @@ public class TurnManager : MonoBehaviour
         else
         {
             currentEnemyIndex++;
-            if (currentEnemyIndex >= Enemies.Count)
+            if (currentEnemyIndex >= enemies.Count)
             {
                 SwapTurn();
             }
@@ -63,6 +63,7 @@ public class TurnManager : MonoBehaviour
         {
             currentTurn = Turn.Enemy;
             currentEnemyIndex = 0;
+            enemies = EnemyManager.Instance.GetAllEnemies();
         }
         else if (currentTurn == Turn.Enemy)
         {

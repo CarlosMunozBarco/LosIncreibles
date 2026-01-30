@@ -1,17 +1,22 @@
 using System;
 using System.Collections;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class Enemy : MonoBehaviour, Turnable
 {
     public static event Action<Turnable> OnTurnEnd;
+    public static event Action<Enemy> OnEnemyDie;
 
+    public float maxHP = 100f;
+
+    private float currentHP;
     private bool isMyTurn = false;
     private bool hasActed = false;
 
     private void Update()
     {
-        if(isMyTurn && !hasActed)
+        if (isMyTurn && !hasActed)
         {
             Debug.Log("Considerate atacado");
             hasActed = true;
@@ -37,5 +42,20 @@ public class Enemy : MonoBehaviour, Turnable
     {
         isMyTurn = true;
         hasActed = false;
+    }
+
+    public void TakeDamage(float damage)
+    {
+        currentHP -= damage;
+        if(currentHP <= 0)
+        {
+            Die();
+        }
+    }
+
+    private void Die()
+    {
+        OnEnemyDie.Invoke(this);
+        Destroy(gameObject);
     }
 }
