@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6f36b2bc7cde8454a8d6a2ed8bff2905, type: 3}
   m_Name: BasicCard
   m_EditorClassIdentifier: 
-  cardName: 
+  cardName: Basic Card
   cardImage: {fileID: 0}
-  cardDescription: 
+  cardDescription: Deal 10 damage to the current enemy
