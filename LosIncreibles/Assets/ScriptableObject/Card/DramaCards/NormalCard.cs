@@ -9,18 +9,19 @@ public class NormalCard : Card
 
     public override void PlayCard()
     {
-        if(CombatManager.Instance.currentEnemy != null)
+        Enemy enemy = CombatManager.Instance.GetCurrentEnemy();
+        if (enemy != null)
         {
-            if(CombatManager.Instance.currentEnemy.GetComponent<Poison>() != null)
+            if (enemy.GetComponent<Poison>() != null)
             {
-                CombatManager.Instance.currentEnemy.GetComponent<Poison>().poisonStacks = 
-                    CombatManager.Instance.currentEnemy.GetComponent<Poison>().poisonStacks + initialStacks;
+                enemy.GetComponent<Poison>().poisonStacks =
+                    enemy.GetComponent<Poison>().poisonStacks + initialStacks;
             }
             else
             {
-                CombatManager.Instance.currentEnemy.AddComponent<Poison>();
-                CombatManager.Instance.currentEnemy.GetComponent<Poison>().damagePerTurn = poisonDamage;
-                CombatManager.Instance.currentEnemy.GetComponent<Poison>().poisonStacks = initialStacks;
+                enemy.AddComponent<Poison>();
+                enemy.GetComponent<Poison>().damagePerTurn = poisonDamage;
+                enemy.GetComponent<Poison>().poisonStacks = initialStacks;
             }
         }
         else

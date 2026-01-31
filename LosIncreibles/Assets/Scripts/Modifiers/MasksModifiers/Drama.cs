@@ -19,7 +19,7 @@ public class Drama : MonoBehaviour
 
     public void HandlePlayerAttack()
     {
-        Enemy currentEnemy = CombatManager.Instance.currentEnemy;
+        Enemy currentEnemy = CombatManager.Instance.GetCurrentEnemy();
         if (currentEnemy != null)
         {
             if (currentEnemy.GetComponent<Poison>() != null)

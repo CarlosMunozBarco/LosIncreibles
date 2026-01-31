@@ -38,7 +38,7 @@ public class Mystery : MonoBehaviour
 
     private void ApplyPoison()
     {
-        Enemy currentEnemy = CombatManager.Instance.currentEnemy;
+        Enemy currentEnemy = CombatManager.Instance.GetCurrentEnemy();
         if (currentEnemy != null)
         {
             if (currentEnemy.GetComponent<Poison>() != null)
@@ -120,7 +120,7 @@ public class Mystery : MonoBehaviour
     public void ApplyLaugh()
     {
         Debug.Log("Applying Laugh");
-        Enemy currentEnemy = CombatManager.Instance.currentEnemy;
+        Enemy currentEnemy = CombatManager.Instance.GetCurrentEnemy();
         if (currentEnemy != null)
         {
             if (currentEnemy.GetComponent<Laugh>() == null)

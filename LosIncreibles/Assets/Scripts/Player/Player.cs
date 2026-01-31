@@ -45,7 +45,7 @@ public class Player : MonoBehaviour, Turnable
 
     public void Attack(float damage)
     {
-        CombatManager.Instance.currentEnemy.TakeDamage(damage);
+        CombatManager.Instance.GetCurrentEnemy().TakeDamage(damage);
         OnPlayerAttack?.Invoke();
     }
 

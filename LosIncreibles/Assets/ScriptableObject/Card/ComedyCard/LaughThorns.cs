@@ -9,7 +9,7 @@ public class LaughThorns : Card
     public override void PlayCard()
     {
         CombatManager.Instance.GetPlayer().Attack(damage);
-        if (CombatManager.Instance.currentEnemy.GetComponent<Laugh>() != null )
+        if (CombatManager.Instance.GetCurrentEnemy().GetComponent<Laugh>() != null )
         {
             if(CombatManager.Instance.player != null)
             {

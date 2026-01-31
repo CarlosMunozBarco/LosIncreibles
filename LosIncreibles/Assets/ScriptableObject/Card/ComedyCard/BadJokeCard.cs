@@ -17,7 +17,7 @@ public class BadJokeCard : Card
         else
         {
 
-            CombatManager.Instance.currentEnemy.TakeDamage(normalDamage);
+            CombatManager.Instance.GetCurrentEnemy().TakeDamage(normalDamage);
         }
     }
 }

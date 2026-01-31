@@ -114,7 +114,7 @@ public class MaskManager : MonoBehaviour
         }
         else
         {
-            CombatManager.Instance.currentEnemy.shield += 15;
+            CombatManager.Instance.GetCurrentEnemy().shield += 15;
         }
     }
 }

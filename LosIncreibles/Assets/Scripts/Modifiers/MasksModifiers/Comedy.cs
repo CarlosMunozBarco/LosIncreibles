@@ -19,7 +19,7 @@ public class Comedy : MonoBehaviour
 
     public void HandlePlayerAttack()
     {
-        Enemy currentEnemy = CombatManager.Instance.currentEnemy;
+        Enemy currentEnemy = CombatManager.Instance.GetCurrentEnemy();
         if (currentEnemy != null)
         {
             float roll = Random.Range(0f, 1f);

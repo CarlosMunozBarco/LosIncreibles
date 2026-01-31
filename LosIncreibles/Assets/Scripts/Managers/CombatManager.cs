@@ -5,7 +5,7 @@ public class CombatManager : MonoBehaviour
     public static CombatManager Instance;
 
     public Player player;
-    public Enemy currentEnemy;
+    private Enemy currentEnemy;
 
     private void OnEnable()
     {
@@ -63,5 +63,14 @@ public class CombatManager : MonoBehaviour
     private void HandleWaveSpawned()
     {
         currentEnemy = EnemyManager.Instance.GetFirstEnemy();
+    }
+
+    public Enemy GetCurrentEnemy()
+    {
+        if(currentEnemy == null)
+        {
+            currentEnemy = EnemyManager.Instance.GetFirstEnemy();
+        }
+        return currentEnemy;
     }
 }
