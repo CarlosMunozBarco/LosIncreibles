@@ -199,6 +199,9 @@ MonoBehaviour:
   availableCards:
   - {fileID: 11400000, guid: dad4c741f30499544b45b201fae12323, type: 2}
   - {fileID: 11400000, guid: b4cccf1ff3bdb044db07c5fe540d146c, type: 2}
+  - {fileID: 11400000, guid: 0831a180398f73e47a79e80f508b1bc7, type: 2}
+  - {fileID: 11400000, guid: 7fb3a8e99a272aa46a3e4d9ca795cb0b, type: 2}
+  - {fileID: 11400000, guid: a13b81ca250618f4ca3427895aa1acac, type: 2}
   playerDeck: []
 --- !u!4 &44308924
 Transform:
