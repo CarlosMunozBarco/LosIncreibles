@@ -103,7 +103,10 @@ public class UIManager : MonoBehaviour
     /// </summary>
     public void OnTurnButtonPressed()
     {
-        
+        if (TurnManager.Instance.currentTurn == Turn.Player)
+        {
+            CombatManager.Instance.player.EndTurn();     
+        }
     }
     /// <summary>
     /// Metodo que recibe el número actual de vidas y actualiza el texto en pantalla
@@ -112,6 +115,11 @@ public class UIManager : MonoBehaviour
     public void UpdateLiveText(float currentHearts)
     {
         heartsText.text = currentHearts.ToString();
+    }
+
+    public void UpdateCardsRemainigText(int cardsRemaining)
+    {
+        cardsText.text = $"{cardsRemaining.ToString()} / 4";
     }
 
     /// <summary>
