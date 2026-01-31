@@ -13,7 +13,7 @@ public class Laugh : MonoBehaviour
     {
         if(enemy == currentEnemy)
         {
-            //enemy.canPlayThisTurn = false;
+            // enemy.canPlayThisTurn = false;
         }
         
     }
