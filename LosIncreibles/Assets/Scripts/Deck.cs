@@ -32,6 +32,7 @@ public class Deck : MonoBehaviour
     public void RemoveCard(CardUI card)
     {
         cardsRemainingToPlay--;
+        UIManager.Instance.UpdateCardsRemainingText(cardsRemainingToPlay);
         cards.Remove(card);
     }
 
