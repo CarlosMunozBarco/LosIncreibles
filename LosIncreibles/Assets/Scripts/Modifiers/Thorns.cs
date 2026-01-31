@@ -39,7 +39,7 @@ public class Thorns : MonoBehaviour
             turnsOfDurations--;
             if (turnsOfDurations == 0)
             {
-                thornsStack = 0;
+               Destroy(this);
             }
         }
     }
