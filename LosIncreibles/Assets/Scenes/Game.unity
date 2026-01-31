@@ -1913,11 +1913,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f3f7338652e644348b30bf86bb4a919b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameUIObject: {fileID: 0}
-  heartsText: {fileID: 0}
-  defeatUIObject: {fileID: 0}
-  victoryUIObject: {fileID: 0}
-  pauseUIObject: {fileID: 0}
+  gameUIObject: {fileID: 2033524454}
+  heartsText: {fileID: 1834524883}
+  defeatUIObject: {fileID: 1738024287}
+  victoryUIObject: {fileID: 197133222}
+  pauseUIObject: {fileID: 1699285760}
 --- !u!1 &760913277
 GameObject:
   m_ObjectHideFlags: 0

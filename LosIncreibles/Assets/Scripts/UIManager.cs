@@ -1,5 +1,6 @@
 using TMPro;
 using UnityEngine;
+using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
 
 public class UIManager : MonoBehaviour
@@ -21,6 +22,7 @@ public class UIManager : MonoBehaviour
     [Space(25)]
     [Header("PAUSE UI")]
     [SerializeField] private GameObject pauseUIObject;
+    private bool pausedGame = false;
 
     private static UIManager instance;
     public static UIManager Instance
@@ -57,8 +59,18 @@ public class UIManager : MonoBehaviour
         // desactivamos la interfaz de pausa
         pauseUIObject.SetActive(false);
     }
+    void Update()
+    {
+        // si presionamos la tecla de pausa...
+        if (InputSystem.actions["Pause"].WasPressedThisFrame())
+        {
+            // si esta activado, lo desactivamos y viceversa.
+            TogglePauseUI(pausedGame);
+            pausedGame = !pausedGame;   
+        }
+    }
 
-     /// <summary>
+    /// <summary>
     /// Metodo que recibe el número actual de vidas y actualiza el texto en pantalla
     /// </summary>
     /// <param name="currentHearts"></param>
