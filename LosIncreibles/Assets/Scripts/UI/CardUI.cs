@@ -74,7 +74,7 @@ public class CardUI : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, 
     public void OnPointerUp(PointerEventData eventData)
     {
         GameManager.Instance.cardIsBeingHolded = false;
-        if (transform.localPosition.y >= YPositionToUseCard)
+        if (transform.localPosition.y >= YPositionToUseCard && TurnManager.Instance.currentTurn == Turn.Player)
         {
             PlayCard();
             return;

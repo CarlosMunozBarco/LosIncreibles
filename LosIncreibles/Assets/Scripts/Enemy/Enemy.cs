@@ -40,7 +40,7 @@ public class Enemy : MonoBehaviour, Turnable
 
     private IEnumerator FinishTurn()
     {
-        yield return new WaitForSeconds(3f); // Simulate thinking time
+        yield return new WaitForSeconds(3f);
         canPlayThisTurn = true;
         EndTurn();
     }
@@ -87,7 +87,6 @@ public class Enemy : MonoBehaviour, Turnable
     {
         hasDied = true;
         OnEnemyDie.Invoke(this);
-        OnTurnEnd?.Invoke(this);
         Destroy(gameObject);
     }
 

@@ -5,22 +5,38 @@ using UnityEngine;
 
 public class TurnManager : MonoBehaviour
 {
+    public static TurnManager Instance;
+
     public static event Action<Turn> OnTurnChanged;
     public Turn currentTurn;
     public Player player;
 
     private int currentEnemyIndex = 0;
 
+    private void Awake()
+    {
+        if (Instance == null)
+        {
+            Instance = this;
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
+    }
+
     private void OnEnable()
     {
         Player.OnTurnEnd += OnTurnFinished;
         Enemy.OnTurnEnd += OnTurnFinished;
+        Enemy.OnEnemyDie += HandleEnemyDie;
     }
 
     private void OnDisable()
     {
         Player.OnTurnEnd -= OnTurnFinished;
         Enemy.OnTurnEnd -= OnTurnFinished;
+        Enemy.OnEnemyDie -= HandleEnemyDie;
     }
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -56,6 +72,10 @@ public class TurnManager : MonoBehaviour
             {
                 SwapTurn();
             }
+            else
+            {
+                EnemyManager.Instance.StartTurn(currentEnemyIndex);
+            }
         }
     }
 
@@ -73,6 +93,22 @@ public class TurnManager : MonoBehaviour
         }
 
         StartTurn();
+    }
+
+    private void HandleEnemyDie(Enemy deadEnemy)
+    {
+        var allEnemies = EnemyManager.Instance.GetAllEnemies();
+        if (allEnemies.Count == 0)
+        {
+            SwapTurn();
+        }
+        else if (currentTurn == Turn.Enemy)
+        {
+            if (currentEnemyIndex >= allEnemies.Count)
+            {
+                SwapTurn();
+            }
+        }
     }
 }
 

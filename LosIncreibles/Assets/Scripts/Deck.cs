@@ -52,7 +52,7 @@ public class Deck : MonoBehaviour
             cards.Add(cardUIaux);
         }
 
-        await Task.Delay(5000);
+        await Task.Delay(250);
         hlg.enabled = false;
     }
 }
