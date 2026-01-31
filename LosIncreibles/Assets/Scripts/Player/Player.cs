@@ -58,7 +58,7 @@ public class Player : MonoBehaviour, Turnable
         }
 
         float effectiveDamage = damage - shield;
-        shield -= effectiveDamage;
+        shield -= damage;
         if(shield < 0) shield = 0;
         if (effectiveDamage < 0) effectiveDamage = 0;
 

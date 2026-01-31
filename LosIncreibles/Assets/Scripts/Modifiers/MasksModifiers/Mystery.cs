@@ -137,6 +137,7 @@ public class Mystery : MonoBehaviour
         if (player.GetComponent<Thorns>() == null)
         {
             Thorns thorn = player.gameObject.AddComponent<Thorns>();
+            thorn.AddThornsStacks(1);
         }
         else
         {
@@ -152,6 +153,7 @@ public class Mystery : MonoBehaviour
         if (player.GetComponent<Bandages>() == null)
         {
             Bandages bandage = player.gameObject.AddComponent<Bandages>();
+            bandage.AddBandagesStacks(1);
         }
         else
         {
