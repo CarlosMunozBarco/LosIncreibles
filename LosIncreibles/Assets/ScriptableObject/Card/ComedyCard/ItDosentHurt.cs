@@ -14,7 +14,7 @@ public class ItDosentHurt : Card
         
         if(CombatManager.Instance.player != null)
         {
-            if(CombatManager.Instance.GetCurrentEnemy().GetComponent<Poison>() != null)
+            if(CombatManager.Instance.player.GetComponent<Poison>() != null)
             {
                 CombatManager.Instance.player.GetComponent<Poison>().poisonStacks += poisonStack; 
                 
