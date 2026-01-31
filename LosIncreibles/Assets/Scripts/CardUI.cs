@@ -22,6 +22,8 @@ public class CardUI : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, 
     private Vector3 dragOffsetWorld;
     private Camera uiCamera;
 
+    private int siblingIndex = 0;
+
     public void Initialialize(Card card)
     {
         this.card = card;
@@ -33,6 +35,8 @@ public class CardUI : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, 
     private void Start()
     {
         uiCamera = Camera.main;
+        siblingIndex = transform.GetSiblingIndex();
+
     }
 
     private void Update()
@@ -52,6 +56,7 @@ public class CardUI : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, 
     public void OnPointerDown(PointerEventData eventData)
     {
         GameManager.Instance.cardIsBeingHolded = true;
+        transform.SetAsLastSibling();
         followMouse = true;
 
         if (uiCamera == null)
@@ -76,6 +81,8 @@ public class CardUI : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, 
         }
         followMouse = false;
         transform.localPosition = originalPosition;
+        transform.localScale = Vector3.one * 0.6f;
+        transform.SetSiblingIndex(siblingIndex);
     }
 
     public void OnPointerEnter(PointerEventData eventData)
