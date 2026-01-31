@@ -24,14 +24,14 @@ public class Drama : MonoBehaviour
         {
             if (currentEnemy.GetComponent<Poison>() != null)
             {
-                currentEnemy.GetComponent<Poison>().posionStacks =
-                    currentEnemy.GetComponent<Poison>().posionStacks + poisonStacksPerHit;
+                currentEnemy.GetComponent<Poison>().poisonStacks =
+                    currentEnemy.GetComponent<Poison>().poisonStacks + poisonStacksPerHit;
             }
             else
             {
                 currentEnemy.AddComponent<Poison>();
                 currentEnemy.GetComponent<Poison>().damagePerTurn = damagePerStack;
-                currentEnemy.GetComponent<Poison>().posionStacks = poisonStacksPerHit;
+                currentEnemy.GetComponent<Poison>().poisonStacks = poisonStacksPerHit;
             }
         }
         else

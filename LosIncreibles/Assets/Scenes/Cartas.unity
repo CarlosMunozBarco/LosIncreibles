@@ -202,6 +202,12 @@ MonoBehaviour:
   - {fileID: 11400000, guid: a13b81ca250618f4ca3427895aa1acac, type: 2}
   - {fileID: 11400000, guid: 7fb3a8e99a272aa46a3e4d9ca795cb0b, type: 2}
   - {fileID: 11400000, guid: dee7bf54f57008849a5b53cc6e3557ad, type: 2}
+  - {fileID: 11400000, guid: 81e5645dddaf31d4e9e8f0301cf61f16, type: 2}
+  - {fileID: 11400000, guid: e04e9d28e18d1f14b9f06f285eff986c, type: 2}
+  - {fileID: 11400000, guid: 4f5e81896440c3a4da483cb0185ae3f2, type: 2}
+  - {fileID: 11400000, guid: 401dc62189df7274d88cea3694885d5a, type: 2}
+  - {fileID: 11400000, guid: cd52ce6fdd2b2024c8d516037c3cc21c, type: 2}
+  - {fileID: 11400000, guid: 0831a180398f73e47a79e80f508b1bc7, type: 2}
   playerDeck: []
 --- !u!4 &44308924
 Transform:

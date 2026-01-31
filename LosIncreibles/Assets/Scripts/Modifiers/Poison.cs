@@ -5,7 +5,7 @@ public class Poison : MonoBehaviour
     public Enemy targetEnemy;
     public float damagePerTurn;
 
-    public int posionStacks = 1;
+    public int poisonStacks = 1;
 
     private void Awake()
     {
@@ -26,10 +26,10 @@ public class Poison : MonoBehaviour
     {
         if(turn == Turn.Enemy)
         {
-            targetEnemy.TakeDamage(damagePerTurn * posionStacks);
-            posionStacks--;
+            targetEnemy.TakeDamage(damagePerTurn * poisonStacks);
+            poisonStacks--;
 
-            if(posionStacks <= 0)
+            if(poisonStacks <= 0)
             {
                 Destroy(this);
             }
