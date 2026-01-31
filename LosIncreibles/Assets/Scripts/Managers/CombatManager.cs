@@ -4,7 +4,7 @@ public class CombatManager : MonoBehaviour
 {
     public static CombatManager Instance;
 
-    private Player player;
+    public Player player;
     public Enemy currentEnemy;
 
     private void OnEnable()
