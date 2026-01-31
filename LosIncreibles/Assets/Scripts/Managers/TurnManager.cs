@@ -42,8 +42,9 @@ public class TurnManager : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        currentTurn = Turn.Enemy;
+        currentTurn = Turn.Player;
         StartTurn();
+        UpdateUI();
     }
 
     private void StartTurn()
@@ -94,6 +95,7 @@ public class TurnManager : MonoBehaviour
         }
 
         StartTurn();
+        UpdateUI();
     }
 
     private void HandleEnemyDie(Enemy deadEnemy)
@@ -110,6 +112,12 @@ public class TurnManager : MonoBehaviour
                 SwapTurn();
             }
         }
+    }
+
+    public void UpdateUI()
+    {
+        string turnName = currentTurn == Turn.Player ? "YOUR TURN" : "ENEMY TURN";
+        UIManager.Instance.UpdateTurnUI(turnName);
     }
 }
 

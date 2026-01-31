@@ -92,7 +92,7 @@ public class Mystery : MonoBehaviour
     {
         if(usedMaskTypes.Contains(MysteryMaskType.Dodge))
         {
-            CombatManager.Instance.player.dodgeChance -= 0.2f;
+            CombatManager.Instance.player.UpdateDodge(-0.2f);
         }
     }
 
@@ -102,7 +102,7 @@ public class Mystery : MonoBehaviour
         Player player = CombatManager.Instance.player;
         if (player != null)
         {
-            player.shield += shieldAmount;
+            player.UpdateShield(shieldAmount);
         }
     }
 
@@ -112,7 +112,7 @@ public class Mystery : MonoBehaviour
         Player player = CombatManager.Instance.player;
         if (player != null)
         {
-            player.dodgeChance += 0.2f;
+            player.UpdateDodge(0.2f);
         }
         usedMaskTypes.Add(MysteryMaskType.Dodge);
     }

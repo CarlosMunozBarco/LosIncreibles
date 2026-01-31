@@ -4,6 +4,7 @@ using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class UIManager : MonoBehaviour
 {
@@ -11,7 +12,8 @@ public class UIManager : MonoBehaviour
     // TO-DO REFERENCIAS A LOS TEXTOS DE VIDA
     [SerializeField] private GameObject gameUIObject;
      [Header("Hearts")]
-    [SerializeField] private TextMeshProUGUI heartsText;
+    [SerializeField] private Slider playerHealth;
+    [SerializeField] private Slider playerShield;
     [SerializeField] private TextMeshProUGUI cardsText;
 
     [Space(25)]
@@ -26,6 +28,12 @@ public class UIManager : MonoBehaviour
     [Header("PAUSE UI")]
     [SerializeField] private GameObject pauseUIObject;
     private bool pausedGame = false;
+
+    [Header("MASKS")]
+    public TMP_Text currentMask;
+
+    [Header("TURN")]
+    public TMP_Text turnText;
 
     private static UIManager instance;
     public static UIManager Instance
@@ -116,10 +124,15 @@ public class UIManager : MonoBehaviour
     /// <summary>
     /// Metodo que recibe el número actual de vidas y actualiza el texto en pantalla
     /// </summary>
-    /// <param name="currentHearts"></param>
-    public void UpdateLiveText(float currentHearts)
+    /// <param name="currentHealth"></param>
+    public void UpdateHealthUI(float currentHealth, float maxHealth)
     {
-        heartsText.text = currentHearts.ToString();
+        playerHealth.value = currentHealth / maxHealth;
+    }
+
+    public void UpdateShieldUI(float currentShield, float maxShield)
+    {
+        playerShield.value = currentShield / maxShield;
     }
 
     public void UpdateCardsRemainigText(int cardsRemaining)
@@ -157,6 +170,13 @@ public class UIManager : MonoBehaviour
         gameUIObject.SetActive(!isActive);
     }
 
+    public void UpdateMaskUI(string maskName)
+    {
+        currentMask.text = maskName;
+    }
 
-
+    public void UpdateTurnUI(string turnName)
+    {
+        turnText.text = turnName;
+    }
 }

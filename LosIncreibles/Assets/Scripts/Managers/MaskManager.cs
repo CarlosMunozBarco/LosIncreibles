@@ -28,6 +28,7 @@ public class MaskManager : MonoBehaviour
     {
         QuitMask();
         EquipMask(newMask);
+        UIManager.Instance.UpdateMaskUI(newMask.maskInfo.maskName);
     }
 
     private void QuitMask()

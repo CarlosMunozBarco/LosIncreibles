@@ -6,6 +6,6 @@ public class ShieldCard : Card
     public float shield = 10;
     public override void PlayCard()
     {
-        CombatManager.Instance.player.shield += shield;
+        CombatManager.Instance.player.UpdateShield(shield);
     }
 }

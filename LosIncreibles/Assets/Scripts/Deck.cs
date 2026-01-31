@@ -40,7 +40,7 @@ public class Deck : MonoBehaviour
     {
         if (turn == Turn.Player)
         {
-            cardsRemainingToPlay = 4;
+            cardsRemainingToPlay = 3;
             UIManager.Instance.UpdateCardsRemainingText(cardsRemainingToPlay);
             DrawCards();
         }

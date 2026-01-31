@@ -7,9 +7,9 @@ public class FearMask : Mask
     public override void ApplyMaskEffect()
     {
         Player player = CombatManager.Instance.player;
-        player.dodgeChance += dodgeChance;
+        player.UpdateDodge(dodgeChance);
 
-        if(player.GetComponent<Fear>() == null)
+        if (player.GetComponent<Fear>() == null)
         {
             player.gameObject.AddComponent<Fear>();
         }
@@ -19,7 +19,7 @@ public class FearMask : Mask
     public override void RemoveMaskEffect()
     {
         Player player = CombatManager.Instance.player;
-        player.dodgeChance -= dodgeChance;
+        player.UpdateDodge(-dodgeChance);
         Fear fearComponent = player.GetComponent<Fear>();
         if (fearComponent != null)
         {

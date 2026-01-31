@@ -1,13 +1,21 @@
+using NUnit.Framework;
 using System;
 using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.UI;
 
 public class Enemy : MonoBehaviour, Turnable
 {
     public static event Action<Turnable> OnTurnEnd;
     public static event Action<Enemy> OnEnemyDie;
      public static event Action<Enemy> OnEnemyAttack;
+
+    public GameObject iconsHolder;
+    public List<IconImage> icons;
+    private List<IconType> currentIcons;
+
 
     public float maxHP = 100f;
     public float shield = 0;
@@ -21,9 +29,14 @@ public class Enemy : MonoBehaviour, Turnable
 
     public bool canPlayThisTurn = true;
     private bool hasDied = false;
+
+    public Slider hpUI;
+    public Slider shieldUI;
+
     private void Start()
     {
         currentHP = maxHP;
+        currentIcons = new List<IconType>();
     }
     private void Update()
     {
@@ -36,6 +49,68 @@ public class Enemy : MonoBehaviour, Turnable
 
             hasActed = true;
         }
+        CheckIcons();
+    }
+
+    public void CheckIcons()
+    {
+        if(GetComponent<Bandages>() != null)
+        {
+            if(!currentIcons.Contains(IconType.Bandages))
+            {
+                currentIcons.Add(IconType.Bandages);
+                IconImage icon = icons.Find((IconImage i) => i.type == IconType.Bandages);
+                Instantiate(icon.gameObject, iconsHolder.transform);
+            }
+        }
+        else
+        {
+            currentIcons.Remove(IconType.Bandages);
+        }
+
+        if(GetComponent<Laugh>() != null)
+        {
+            if (!currentIcons.Contains(IconType.Laugh))
+            {
+                currentIcons.Add(IconType.Laugh);
+                IconImage icon = icons.Find((IconImage i) => i.type == IconType.Laugh);
+                Instantiate(icon.gameObject, iconsHolder.transform);
+            }
+        }
+        else
+        {
+            currentIcons.Remove(IconType.Laugh);
+        }
+
+        if (GetComponent<Poison>() != null)
+        {
+            Debug.Log("Enemy has Poison");
+            if (!currentIcons.Contains(IconType.Poison))
+            {
+                currentIcons.Add(IconType.Poison);
+                IconImage icon = icons.Find((IconImage i) => i.type == IconType.Poison);
+                Instantiate(icon.gameObject, iconsHolder.transform);
+            }
+        }
+        else
+        {
+            currentIcons.Remove(IconType.Poison);
+        }
+
+        if (GetComponent<Thorns>() != null)
+        {
+            if (!currentIcons.Contains(IconType.Thorns))
+            {
+                currentIcons.Add(IconType.Thorns);
+                IconImage icon = icons.Find((IconImage i) => i.type == IconType.Thorns);
+                Instantiate(icon.gameObject, iconsHolder.transform);
+            }
+        }
+        else
+        {
+            currentIcons.Remove(IconType.Thorns);
+        }
+
     }
 
     private IEnumerator FinishTurn()
@@ -77,10 +152,12 @@ public class Enemy : MonoBehaviour, Turnable
         if (effectiveDamage < 0) effectiveDamage = 0;
 
         currentHP -= effectiveDamage;
+        UpdateUI();
         if (currentHP <= 0 && !hasDied)
         {
             Die();
         }
+        
     }
 
     private void Die()
@@ -97,10 +174,27 @@ public class Enemy : MonoBehaviour, Turnable
         {
             currentHP = maxHP;
         }
+        UpdateUI();
     }
 
     public void AddShield(float amount)
     {
         shield += amount;
+        UpdateUI();
+    }
+
+    public void UpdateUI()
+    {
+        hpUI.value = currentHP / maxHP;
+
+        if (shield > 0)
+        {
+            shieldUI.gameObject.SetActive(true);
+            shieldUI.value = shield;
+        }
+        else
+        {
+            shieldUI.gameObject.SetActive(false);
+        }
     }
 }

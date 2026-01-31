@@ -10,9 +10,9 @@ public class ItDosentHurt : Card
 
     public override void PlayCard()
     {
-        CombatManager.Instance.player.shield += shield;
-        
-        if(CombatManager.Instance.player != null)
+        CombatManager.Instance.player.UpdateShield(shield);
+
+        if (CombatManager.Instance.player != null)
         {
             if(CombatManager.Instance.player.GetComponent<Poison>() != null)
             {

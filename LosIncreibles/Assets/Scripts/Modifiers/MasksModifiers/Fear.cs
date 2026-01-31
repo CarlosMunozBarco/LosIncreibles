@@ -20,7 +20,7 @@ public class Fear : MonoBehaviour
     {
         if (turn == Turn.Player)
         {
-            CombatManager.Instance.player.shield += shieldPerTurn;
+            CombatManager.Instance.player.UpdateShield(shieldPerTurn);
             CombatManager.Instance.player.TakeTrueDamage(damagePerTurn);
             damagePerTurn *= 2f;
         }
