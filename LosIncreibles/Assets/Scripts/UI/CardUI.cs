@@ -11,6 +11,7 @@ public class CardUI : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, 
     public TMP_Text cardNameText;
     public TMP_Text cardDescriptionText;
     public Image sprite;
+    public Vector2 limitX;
 
     public Card card;
     public float cardHeightIncrease = 400f;
@@ -84,7 +85,7 @@ public class CardUI : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, 
         }
         followMouse = false;
         transform.localPosition = originalPosition;
-        transform.localScale = Vector3.one * 0.6f;
+        transform.localScale = Vector3.one * 0.5f;
         transform.SetSiblingIndex(siblingIndex);
     }
 
@@ -104,13 +105,24 @@ public class CardUI : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, 
     {
         originalPosition = transform.localPosition;
         transform.localScale = Vector3.one * 1.2f;
+
+        Debug.Log("Current position: " + transform.localPosition.x);
+        if (transform.localPosition.x < limitX.x)
+        {
+            transform.localPosition = new Vector3(limitX.x, transform.localPosition.y, transform.localPosition.z);
+        }
+        else if(transform.localPosition.x > limitX.y)
+        {
+            transform.localPosition = new Vector3(limitX.y, transform.localPosition.y, transform.localPosition.z);
+        }
+
         transform.localPosition = new Vector3(transform.localPosition.x, transform.localPosition.y + cardHeightIncrease, transform.localPosition.z);
         transform.SetAsLastSibling();
     }
 
     public void UnhighlightCard()
     {
-        transform.localScale = Vector3.one * 0.6f;
+        transform.localScale = Vector3.one * 0.5f;
         transform.localPosition = originalPosition;
         originalPosition = transform.localPosition;
         transform.SetSiblingIndex(siblingIndex);
