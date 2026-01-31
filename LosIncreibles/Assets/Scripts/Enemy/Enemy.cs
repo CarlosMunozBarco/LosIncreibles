@@ -10,12 +10,13 @@ public class Enemy : MonoBehaviour, Turnable
      public static event Action<Enemy> OnEnemyAttack;
 
     public float maxHP = 100f;
-    private int damage = 15;
+    public int damage = 15;
 
     private float currentHP;
     private bool isMyTurn = false;
     private bool hasActed = false;
 
+    public bool canPlayThisTurn = true;
     private void Start()
     {
         currentHP = maxHP;
@@ -24,15 +25,19 @@ public class Enemy : MonoBehaviour, Turnable
     {
         if (isMyTurn && !hasActed)
         {
-            Debug.Log("Considerate atacado");
-            hasActed = true;
             StartCoroutine(FinishTurn());
+
+            if(canPlayThisTurn)
+                AttackPlayer();
+
+            hasActed = true;
         }
     }
 
     private IEnumerator FinishTurn()
     {
         yield return new WaitForSeconds(3f); // Simulate thinking time
+        canPlayThisTurn = true;
         EndTurn();
     }
 
