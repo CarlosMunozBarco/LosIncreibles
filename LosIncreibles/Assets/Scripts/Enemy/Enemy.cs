@@ -7,8 +7,10 @@ public class Enemy : MonoBehaviour, Turnable
 {
     public static event Action<Turnable> OnTurnEnd;
     public static event Action<Enemy> OnEnemyDie;
+     public static event Action<Enemy> OnEnemyAttack;
 
     public float maxHP = 100f;
+    private int damage = 15;
 
     private float currentHP;
     private bool isMyTurn = false;
@@ -32,6 +34,12 @@ public class Enemy : MonoBehaviour, Turnable
     {
         yield return new WaitForSeconds(3f); // Simulate thinking time
         EndTurn();
+    }
+
+    public void AttackPlayer()
+    {
+        CombatManager.Instance.player.TakeDamage(damage);
+        OnEnemyAttack?.Invoke(this);
     }
 
 

@@ -199,6 +199,7 @@ MonoBehaviour:
   availableCards:
   - {fileID: 11400000, guid: dad4c741f30499544b45b201fae12323, type: 2}
   - {fileID: 11400000, guid: b4cccf1ff3bdb044db07c5fe540d146c, type: 2}
+  - {fileID: 11400000, guid: a13b81ca250618f4ca3427895aa1acac, type: 2}
   playerDeck: []
 --- !u!4 &44308924
 Transform:
@@ -567,6 +568,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bc705b50db5e23147adb0f0089862a97, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player: {fileID: 0}
   currentEnemy: {fileID: 1406830113}
 --- !u!4 &859478535
 Transform:
