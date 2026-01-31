@@ -10,10 +10,12 @@ public class Player : MonoBehaviour, Turnable
     private bool isMyTurn = true;
 
     public float maxHP = 100f;
-
+    public float shield = 0;
     private float currentHP;
 
+    public float dodgeChance = 0f;
 
+    
     private void Update()
     {
         if(isMyTurn)
@@ -24,6 +26,11 @@ public class Player : MonoBehaviour, Turnable
             }
         }
     }
+    private void Start()
+    {
+        currentHP = maxHP;
+    }
+
     public void EndTurn()
     {
         isMyTurn = false;
@@ -42,6 +49,27 @@ public class Player : MonoBehaviour, Turnable
     }
 
     public void TakeDamage(float damage)
+    {
+        if(UnityEngine.Random.value < dodgeChance)
+        {
+            Debug.Log("Player dodged the attack!");
+            return;
+        }
+
+        float effectiveDamage = damage - shield;
+        shield -= effectiveDamage;
+        if(shield < 0) shield = 0;
+        if (effectiveDamage < 0) effectiveDamage = 0;
+
+
+        currentHP -= effectiveDamage;
+        if (currentHP <= 0)
+        {
+            Die();
+        }
+    }
+
+    public void TakeTrueDamage(float damage)
     {
         currentHP -= damage;
         if (currentHP <= 0)

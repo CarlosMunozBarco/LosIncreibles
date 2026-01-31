@@ -613,7 +613,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 74ad890ee7590dd418c568483ddd2140, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentMask: {fileID: 11400000, guid: ce14102184568b84fb8342ebf0f2ebc2, type: 2}
+  currentMask: {fileID: 11400000, guid: 98ab74d36f238114580d409f9238de93, type: 2}
 --- !u!4 &909221232
 Transform:
   m_ObjectHideFlags: 0
@@ -787,7 +787,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHP: 50
+  shield: 0
   damage: 15
+  dodgeChance: 0
   canPlayThisTurn: 1
 --- !u!212 &1406830114
 SpriteRenderer:

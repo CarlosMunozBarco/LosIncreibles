@@ -10,8 +10,8 @@ public class MaskInfo : ScriptableObject
 
 public enum MaskType
 {
-    Mistery,
+    Mystery,
     Comedy,
-    Tragedy,
+    Terror,
     Drama
 }

@@ -10,7 +10,9 @@ public class Enemy : MonoBehaviour, Turnable
      public static event Action<Enemy> OnEnemyAttack;
 
     public float maxHP = 100f;
+    public float shield = 0;
     public int damage = 15;
+    public float dodgeChance = 0f;
 
     private float currentHP;
     private bool isMyTurn = false;
@@ -43,6 +45,7 @@ public class Enemy : MonoBehaviour, Turnable
 
     public void AttackPlayer()
     {
+        Debug.Log("Attacking Player for " + damage + " damage.");
         CombatManager.Instance.player.TakeDamage(damage);
         OnEnemyAttack?.Invoke(this);
     }
@@ -63,8 +66,16 @@ public class Enemy : MonoBehaviour, Turnable
 
     public void TakeDamage(float damage)
     {
-        currentHP -= damage;
-        if(currentHP <= 0)
+        if (UnityEngine.Random.value < dodgeChance)
+        {
+            return;
+        }
+
+        float effectiveDamage = damage - shield;
+        if (effectiveDamage < 0) effectiveDamage = 0;
+
+        currentHP -= effectiveDamage;
+        if (currentHP <= 0)
         {
             Die();
         }
