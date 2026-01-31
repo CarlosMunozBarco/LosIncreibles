@@ -1,7 +1,7 @@
 using Unity.VisualScripting;
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "LaughThorns", menuName = "Scriptable Objects/LaughThorns")]
+[CreateAssetMenu(fileName = "LaughThorns", menuName = "Cards/LaughThorns")]
 public class LaughThorns : Card
 {
     public int thornsStack = 5;
