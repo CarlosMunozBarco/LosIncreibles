@@ -54,4 +54,13 @@ public class Player : MonoBehaviour, Turnable
     {
         Destroy(gameObject);
     }
+
+    public void Heal(float amount)
+    {
+        currentHP += amount;
+        if (currentHP > maxHP)
+        {
+            currentHP = maxHP;
+        }
+    }
 }

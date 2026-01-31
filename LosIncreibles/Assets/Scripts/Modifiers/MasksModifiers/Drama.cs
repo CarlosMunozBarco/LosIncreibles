@@ -7,6 +7,16 @@ public class Drama : MonoBehaviour
     public int poisonStacksPerHit = 2;
     public float damagePerStack = 1f;
 
+    private void OnEnable()
+    {
+        Player.OnPlayerAttack += HandlePlayerAttack;
+    }
+
+    private void OnDisable()
+    {
+        Player.OnPlayerAttack -= HandlePlayerAttack;
+    }
+
     public void HandlePlayerAttack()
     {
         Enemy currentEnemy = CombatManager.Instance.currentEnemy;

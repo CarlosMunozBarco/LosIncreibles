@@ -6,15 +6,39 @@ public class Comedy : MonoBehaviour
 
     public float damage = 5f;
     public float heal = 5f;
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+
+    private void OnEnable()
     {
-        
+        Player.OnPlayerAttack += HandlePlayerAttack;
     }
 
-    // Update is called once per frame
-    void Update()
+    private void OnDisable()
     {
-        
+        Player.OnPlayerAttack -= HandlePlayerAttack;
+    }
+
+    public void HandlePlayerAttack()
+    {
+        Enemy currentEnemy = CombatManager.Instance.currentEnemy;
+        if (currentEnemy != null)
+        {
+            float roll = Random.Range(0f, 1f);
+            if (roll <= laughChance)
+            {
+                if (currentEnemy.GetComponent<Laugh>() == null)
+                {
+                    currentEnemy.gameObject.AddComponent<Laugh>();
+                }
+                else
+                {
+                    currentEnemy.TakeDamage(damage);
+                    CombatManager.Instance.player.Heal(heal);
+                }
+            }
+        }
+        else
+        {
+            Debug.Log("CombatManager bugeado, no hay enemigo");
+        }
     }
 }
