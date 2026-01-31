@@ -13,14 +13,14 @@ public class NormalCard : Card
         {
             if(CombatManager.Instance.currentEnemy.GetComponent<Poison>() != null)
             {
-                CombatManager.Instance.currentEnemy.GetComponent<Poison>().posionStacks = 
-                    CombatManager.Instance.currentEnemy.GetComponent<Poison>().posionStacks + initialStacks;
+                CombatManager.Instance.currentEnemy.GetComponent<Poison>().poisonStacks = 
+                    CombatManager.Instance.currentEnemy.GetComponent<Poison>().poisonStacks + initialStacks;
             }
             else
             {
                 CombatManager.Instance.currentEnemy.AddComponent<Poison>();
                 CombatManager.Instance.currentEnemy.GetComponent<Poison>().damagePerTurn = poisonDamage;
-                CombatManager.Instance.currentEnemy.GetComponent<Poison>().posionStacks = initialStacks;
+                CombatManager.Instance.currentEnemy.GetComponent<Poison>().poisonStacks = initialStacks;
             }
         }
         else
