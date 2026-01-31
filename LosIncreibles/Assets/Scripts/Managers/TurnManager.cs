@@ -68,6 +68,7 @@ public class TurnManager : MonoBehaviour
         else
         {
             currentEnemyIndex++;
+            Debug.Log($"he llegado a current enemy index: {currentEnemyIndex}");
             if (currentEnemyIndex >= EnemyManager.Instance.GetAllEnemies().Count)
             {
                 SwapTurn();
