@@ -150,8 +150,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentTurn: 0
   player: {fileID: 1948980983}
-  enemies:
-  - {fileID: 1406830113}
 --- !u!4 &37381206
 Transform:
   m_ObjectHideFlags: 0
@@ -208,6 +206,22 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 401dc62189df7274d88cea3694885d5a, type: 2}
   - {fileID: 11400000, guid: cd52ce6fdd2b2024c8d516037c3cc21c, type: 2}
   - {fileID: 11400000, guid: 0831a180398f73e47a79e80f508b1bc7, type: 2}
+  - {fileID: 11400000, guid: 5a5750cce3c6a9646afe4c2be41bdc01, type: 2}
+  - {fileID: 11400000, guid: e834c9a08a137fd4ba493ade2256ca5f, type: 2}
+  - {fileID: 11400000, guid: 29be0cebb5f16194b93fa420bcfc67f6, type: 2}
+  - {fileID: 11400000, guid: 893ae460c4dcafd4aa09b5747b4f5ac1, type: 2}
+  - {fileID: 11400000, guid: 8842ed579111bf54085933406d7a133a, type: 2}
+  - {fileID: 11400000, guid: ff91bc8229bf8b0408929900e94f82bb, type: 2}
+  - {fileID: 11400000, guid: 35e2e840a33fb5a47a2ab9d819e9b320, type: 2}
+  - {fileID: 11400000, guid: f2034a914f534bc42b16ea9dac613c39, type: 2}
+  - {fileID: 11400000, guid: df4dabde2e33ed74084ea83992c5af2c, type: 2}
+  - {fileID: 11400000, guid: 2ae65bd0cef0b254e9ad71e0e489fc32, type: 2}
+  - {fileID: 11400000, guid: 7929144c137943243a6bf1404722e51f, type: 2}
+  - {fileID: 11400000, guid: eb8c962fcfbdaf645ad904b4c913dba3, type: 2}
+  - {fileID: 11400000, guid: 7d7c8eed95dbbb044b883fc1b3dcac78, type: 2}
+  - {fileID: 11400000, guid: a31c72e3fff93a44c802f6ae903df1f3, type: 2}
+  - {fileID: 11400000, guid: 40a8eb2c911b4604297f5f1846d5a438, type: 2}
+  - {fileID: 11400000, guid: 2caa0f320040719428df548be543fac1, type: 2}
   playerDeck: []
 --- !u!4 &44308924
 Transform:
@@ -577,7 +591,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 0}
-  currentEnemy: {fileID: 1406830113}
 --- !u!4 &859478535
 Transform:
   m_ObjectHideFlags: 0
@@ -622,6 +635,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9ab4b342eae8c5349a818f51a21c5700, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  enemySpawnPoints: []
+  waves: []
   currentEnemies:
   - {fileID: 1406830113}
 --- !u!4 &1293686379
@@ -754,6 +769,7 @@ MonoBehaviour:
   shield: 0
   damage: 15
   dodgeChance: 0
+  isBoss: 0
   canPlayThisTurn: 1
 --- !u!212 &1406830114
 SpriteRenderer:
@@ -1016,6 +1032,7 @@ MonoBehaviour:
   cards: []
   cardUI: {fileID: 560423171348581213, guid: 8667d3bfb270bf841a0d1613cda8e476, type: 3}
   cardsPerTurn: 8
+  cardsRemainingToPlay: 4
 --- !u!1 &1688608784
 GameObject:
   m_ObjectHideFlags: 0
