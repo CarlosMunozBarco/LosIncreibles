@@ -9,12 +9,12 @@ public class Deck : MonoBehaviour
     public CardUI cardUI;
     public int cardsPerTurn = 8;
 
-    private HorizontalLayoutGroup hlg;
 
     private void OnEnable()
     {
         CardUI.OnCardPlayed += RemoveCard;
         TurnManager.OnTurnChanged += TurnChanged;
+
     }
 
     private void OnDisable()
@@ -22,12 +22,6 @@ public class Deck : MonoBehaviour
         CardUI.OnCardPlayed -= RemoveCard;
         TurnManager.OnTurnChanged -= TurnChanged;
 
-    }
-
-    private void Awake()
-    {
-        hlg = GetComponent<HorizontalLayoutGroup>();
-        //hlg.enabled = false;
     }
 
     public void RemoveCard(CardUI card)
