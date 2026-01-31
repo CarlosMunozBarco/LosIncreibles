@@ -13,12 +13,14 @@ public class Enemy : MonoBehaviour, Turnable
     public float shield = 0;
     public int damage = 15;
     public float dodgeChance = 0f;
+    public bool isBoss = false;
 
     private float currentHP;
     private bool isMyTurn = false;
     private bool hasActed = false;
 
     public bool canPlayThisTurn = true;
+    private bool hasDied = false;
     private void Start()
     {
         currentHP = maxHP;
@@ -75,7 +77,7 @@ public class Enemy : MonoBehaviour, Turnable
         if (effectiveDamage < 0) effectiveDamage = 0;
 
         currentHP -= effectiveDamage;
-        if (currentHP <= 0)
+        if (currentHP <= 0 && !hasDied)
         {
             Die();
         }
@@ -83,7 +85,9 @@ public class Enemy : MonoBehaviour, Turnable
 
     private void Die()
     {
+        hasDied = true;
         OnEnemyDie.Invoke(this);
+        OnTurnEnd?.Invoke(this);
         Destroy(gameObject);
     }
 

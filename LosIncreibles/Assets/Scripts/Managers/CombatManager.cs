@@ -36,6 +36,7 @@ public class CombatManager : MonoBehaviour
     private void Start()
     {
         player = GameObject.FindWithTag("Player").GetComponent<Player>();
+        currentEnemy = EnemyManager.Instance.GetFirstEnemy();
     }
 
     public Player GetPlayer()
@@ -51,7 +52,7 @@ public class CombatManager : MonoBehaviour
 
     private void HandleEnemyDeath(Enemy deadEnemy)
     {
-        if (currentEnemy == deadEnemy)
+        if (currentEnemy == null)
         {
             currentEnemy = EnemyManager.Instance.GetFirstEnemy();
         }

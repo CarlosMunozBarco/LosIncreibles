@@ -1,5 +1,6 @@
 using NUnit.Framework;
 using System.Collections.Generic;
+using System.Threading.Tasks;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -10,10 +11,13 @@ public class Deck : MonoBehaviour
     public int cardsPerTurn = 8;
 
 
+    private HorizontalLayoutGroup hlg;
+
     private void OnEnable()
     {
         CardUI.OnCardPlayed += RemoveCard;
         TurnManager.OnTurnChanged += TurnChanged;
+        hlg = GetComponent<HorizontalLayoutGroup>();
 
     }
 
@@ -37,9 +41,9 @@ public class Deck : MonoBehaviour
         }
     }
 
-    public void DrawCards()
+    public async void DrawCards()
     {
-        //hlg.enabled = true;
+        hlg.enabled = true;
         for(int i = cards.Count; i < cardsPerTurn; i++)
         {
             Card card = CardsManager.Instance.GetRandomCard();
@@ -47,6 +51,8 @@ public class Deck : MonoBehaviour
             cardUIaux.Initialialize(card);
             cards.Add(cardUIaux);
         }
-        //hlg.enabled = true;
+
+        await Task.Delay(5000);
+        hlg.enabled = false;
     }
 }

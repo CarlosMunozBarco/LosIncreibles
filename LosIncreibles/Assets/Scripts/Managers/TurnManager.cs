@@ -8,7 +8,6 @@ public class TurnManager : MonoBehaviour
     public static event Action<Turn> OnTurnChanged;
     public Turn currentTurn;
     public Player player;
-    public List<Enemy> enemies;
 
     private int currentEnemyIndex = 0;
 
@@ -40,7 +39,7 @@ public class TurnManager : MonoBehaviour
         }
         else if (currentTurn == Turn.Enemy)
         {
-            enemies[currentEnemyIndex].StartTurn();
+            EnemyManager.Instance.StartTurn(currentEnemyIndex);
         }
     }
 
@@ -53,7 +52,7 @@ public class TurnManager : MonoBehaviour
         else
         {
             currentEnemyIndex++;
-            if (currentEnemyIndex >= enemies.Count)
+            if (currentEnemyIndex >= EnemyManager.Instance.GetAllEnemies().Count)
             {
                 SwapTurn();
             }
@@ -66,7 +65,6 @@ public class TurnManager : MonoBehaviour
         {
             currentTurn = Turn.Enemy;
             currentEnemyIndex = 0;
-            enemies = EnemyManager.Instance.GetAllEnemies();
         }
         else if (currentTurn == Turn.Enemy)
         {

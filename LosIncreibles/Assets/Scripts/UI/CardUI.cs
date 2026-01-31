@@ -102,7 +102,7 @@ public class CardUI : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, 
         originalPosition = transform.localPosition;
         transform.localScale = Vector3.one * 1.2f;
         transform.localPosition = new Vector3(transform.localPosition.x, transform.localPosition.y + cardHeightIncrease, transform.localPosition.z);
-        
+        transform.SetAsLastSibling();
     }
 
     public void UnhighlightCard()
@@ -110,12 +110,13 @@ public class CardUI : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, 
         transform.localScale = Vector3.one * 0.6f;
         transform.localPosition = originalPosition;
         originalPosition = transform.localPosition;
-
+        transform.SetSiblingIndex(siblingIndex);
     }
 
     public void PlayCard()
     {
         card.PlayCard();
+        OnCardPlayed?.Invoke(this);
         Destroy(gameObject);
     }
 }
