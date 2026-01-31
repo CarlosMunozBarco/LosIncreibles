@@ -29,6 +29,7 @@ public class Player : MonoBehaviour, Turnable
     private void Start()
     {
         currentHP = maxHP;
+        UIManager.Instance.UpdateLiveText(currentHP);
     }
 
     public void EndTurn()
@@ -63,9 +64,10 @@ public class Player : MonoBehaviour, Turnable
 
 
         currentHP -= effectiveDamage;
+        UIManager.Instance.UpdateLiveText(currentHP);
         if (currentHP <= 0)
         {
-            Die();
+            GameManager.Instance.PlayerDeath();
         }
     }
 
@@ -74,14 +76,10 @@ public class Player : MonoBehaviour, Turnable
         currentHP -= damage;
         if (currentHP <= 0)
         {
-            Die();
+            GameManager.Instance.PlayerDeath();
         }
     }
 
-    private void Die()
-    {
-        Destroy(gameObject);
-    }
 
     public void Heal(float amount)
     {

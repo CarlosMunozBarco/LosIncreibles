@@ -1,4 +1,6 @@
+using JetBrains.Annotations;
 using TMPro;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
@@ -10,6 +12,7 @@ public class UIManager : MonoBehaviour
     [SerializeField] private GameObject gameUIObject;
      [Header("Hearts")]
     [SerializeField] private TextMeshProUGUI heartsText;
+    [SerializeField] private TextMeshProUGUI cardsText;
 
     [Space(25)]
     [Header("DEFEAT UI")]
@@ -70,15 +73,6 @@ public class UIManager : MonoBehaviour
         }
     }
 
-    /// <summary>
-    /// Metodo que recibe el número actual de vidas y actualiza el texto en pantalla
-    /// </summary>
-    /// <param name="currentHearts"></param>
-    public void UpdateHeartsText(int currentHearts)
-    {
-        // heartsText.text = currentHearts.ToString();
-    }
-
       /// <summary>
     /// Metodo que reinicia la escena completa del juego
     /// </summary>
@@ -102,6 +96,22 @@ public class UIManager : MonoBehaviour
     {
         // llamamos al funcionamiento del input de pausa
         GameManager.Instance.PauseInput();
+    }
+
+    /// <summary>
+    /// Metodo en el cual vamos a pasar de turno 
+    /// </summary>
+    public void OnTurnButtonPressed()
+    {
+        
+    }
+    /// <summary>
+    /// Metodo que recibe el número actual de vidas y actualiza el texto en pantalla
+    /// </summary>
+    /// <param name="currentHearts"></param>
+    public void UpdateLiveText(float currentHearts)
+    {
+        heartsText.text = currentHearts.ToString();
     }
 
     /// <summary>
@@ -133,6 +143,7 @@ public class UIManager : MonoBehaviour
         // activamos o desactivamos el menu de juego
         gameUIObject.SetActive(!isActive);
     }
+
 
 
 }

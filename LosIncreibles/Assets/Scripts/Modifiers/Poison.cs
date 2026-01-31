@@ -24,6 +24,12 @@ public class Poison : MonoBehaviour
 
     private void HandleTurnChanged(Turn turn)
     {
+        if(targetEnemy == null)
+        {
+            Destroy(this); 
+            return;
+        }
+        
         if(turn == Turn.Enemy)
         {
             targetEnemy.TakeDamage(damagePerTurn * poisonStacks);
