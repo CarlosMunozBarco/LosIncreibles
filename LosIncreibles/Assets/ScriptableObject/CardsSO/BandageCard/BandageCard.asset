@@ -13,4 +13,5 @@ MonoBehaviour:
   m_Name: BandageCard
   m_EditorClassIdentifier: 
   info: {fileID: 11400000, guid: 78ba79038eb8ce64bacc1af9b435522d, type: 2}
+  maskType: 4
   bandageStacks: 2
