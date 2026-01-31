@@ -11,6 +11,7 @@ public class CombatManager : MonoBehaviour
     {
         TurnManager.OnTurnChanged += HandleTurnChanged;
         Enemy.OnEnemyDie += HandleEnemyDeath;
+        EnemyManager.OnWaveSpawned += HandleWaveSpawned;
 
     }
 
@@ -18,6 +19,7 @@ public class CombatManager : MonoBehaviour
     {
         TurnManager.OnTurnChanged -= HandleTurnChanged;
         Enemy.OnEnemyDie -= HandleEnemyDeath;
+        EnemyManager.OnWaveSpawned -= HandleWaveSpawned;
 
     }
 
@@ -56,5 +58,10 @@ public class CombatManager : MonoBehaviour
         {
             currentEnemy = EnemyManager.Instance.GetFirstEnemy();
         }
+    }
+
+    private void HandleWaveSpawned()
+    {
+        currentEnemy = EnemyManager.Instance.GetFirstEnemy();
     }
 }

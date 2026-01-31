@@ -1,9 +1,11 @@
 using NUnit.Framework;
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class EnemyManager : MonoBehaviour
 {
+    public static event Action OnWaveSpawned;
     public static EnemyManager Instance;
 
     public List<Transform> enemySpawnPoints;
@@ -82,6 +84,7 @@ public class EnemyManager : MonoBehaviour
         }
 
         currentWaveIndex++;
+        OnWaveSpawned?.Invoke();
         Debug.Log("Current Enemies Count: " + currentEnemies.Count);
     }
 
