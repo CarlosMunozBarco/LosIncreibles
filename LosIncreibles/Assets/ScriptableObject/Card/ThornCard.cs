@@ -7,7 +7,7 @@ public class ThornCard : Card
     public int thornsStack = 5;
     public override void PlayCard()
     {
-         if(CombatManager.Instance.player != null)
+        if(CombatManager.Instance.player != null)
         {
             if(CombatManager.Instance.player.GetComponent<Thorns>() != null)
             {

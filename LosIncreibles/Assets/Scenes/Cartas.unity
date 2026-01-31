@@ -201,6 +201,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: b4cccf1ff3bdb044db07c5fe540d146c, type: 2}
   - {fileID: 11400000, guid: a13b81ca250618f4ca3427895aa1acac, type: 2}
   - {fileID: 11400000, guid: 7fb3a8e99a272aa46a3e4d9ca795cb0b, type: 2}
+  - {fileID: 11400000, guid: dee7bf54f57008849a5b53cc6e3557ad, type: 2}
   playerDeck: []
 --- !u!4 &44308924
 Transform:
@@ -744,7 +745,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHP: 50
+  shield: 0
   damage: 15
+  dodgeChance: 0
   canPlayThisTurn: 1
 --- !u!212 &1406830114
 SpriteRenderer:
@@ -1219,6 +1222,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHP: 100
+  shield: 0
+  dodgeChance: 0
 --- !u!50 &1948980984
 Rigidbody2D:
   serializedVersion: 5
