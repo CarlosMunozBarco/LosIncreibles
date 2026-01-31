@@ -10,5 +10,6 @@ public class HitThemAllCard : Card
         {
             enemy.TakeDamage(damage);
         }
+
     }
 }

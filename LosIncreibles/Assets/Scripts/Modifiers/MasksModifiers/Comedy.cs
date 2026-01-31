@@ -41,4 +41,5 @@ public class Comedy : MonoBehaviour
             Debug.Log("CombatManager bugeado, no hay enemigo");
         }
     }
+
 }

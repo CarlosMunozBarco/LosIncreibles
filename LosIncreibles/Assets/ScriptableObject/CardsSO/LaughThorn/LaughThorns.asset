@@ -13,5 +13,6 @@ MonoBehaviour:
   m_Name: LaughThorns
   m_EditorClassIdentifier: 
   info: {fileID: 11400000, guid: d7bc85a9df6181544bc45091b9e1ff7a, type: 2}
+  maskType: 1
   thornsStack: 5
   damage: 10

@@ -13,5 +13,6 @@ public enum MaskType
     Mystery,
     Comedy,
     Terror,
-    Drama
+    Drama,
+    Default
 }

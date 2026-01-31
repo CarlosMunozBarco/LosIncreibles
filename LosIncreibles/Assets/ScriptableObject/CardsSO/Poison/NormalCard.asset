@@ -13,5 +13,6 @@ MonoBehaviour:
   m_Name: NormalCard
   m_EditorClassIdentifier: 
   info: {fileID: 11400000, guid: 6949865e8d1a160469383d7397d1475c, type: 2}
+  maskType: 3
   poisonDamage: 2
   initialStacks: 2

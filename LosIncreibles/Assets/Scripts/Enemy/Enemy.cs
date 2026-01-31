@@ -86,4 +86,18 @@ public class Enemy : MonoBehaviour, Turnable
         OnEnemyDie.Invoke(this);
         Destroy(gameObject);
     }
+
+    public void Heal(float amount)
+    {
+        currentHP += amount;
+        if (currentHP > maxHP)
+        {
+            currentHP = maxHP;
+        }
+    }
+
+    public void AddShield(float amount)
+    {
+        shield += amount;
+    }
 }

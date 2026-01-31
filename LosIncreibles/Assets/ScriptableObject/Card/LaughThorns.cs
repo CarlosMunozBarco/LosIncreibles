@@ -27,6 +27,5 @@ public class LaughThorns : Card
                 Debug.Log("CombatManager bugeado, no hay enemigo");
             }
         }
-
     }
 }

@@ -13,4 +13,5 @@ MonoBehaviour:
   m_Name: ThornCard
   m_EditorClassIdentifier: 
   info: {fileID: 11400000, guid: 9bfe63ade0bbf2e428df6e61f2cb0e34, type: 2}
+  maskType: 4
   thornsStack: 5
