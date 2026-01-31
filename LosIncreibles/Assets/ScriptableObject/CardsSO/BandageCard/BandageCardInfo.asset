@@ -10,8 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6f36b2bc7cde8454a8d6a2ed8bff2905, type: 3}
-  m_Name: ShieldCardInfo
+  m_Name: BandageCardInfo
   m_EditorClassIdentifier: 
-  cardName: Shield
+  cardName: BandageCard
   cardImage: {fileID: 0}
-  cardDescription: Gives you shield (10)
+  cardDescription: Give you 2 bandages
