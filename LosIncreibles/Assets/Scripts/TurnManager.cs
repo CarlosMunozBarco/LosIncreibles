@@ -1,9 +1,11 @@
 using NUnit.Framework;
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class TurnManager : MonoBehaviour
 {
+    public static event Action<Turn> OnTurnChanged;
     public Turn currentTurn;
     public Player player;
     public List<Enemy> enemies;
@@ -31,7 +33,8 @@ public class TurnManager : MonoBehaviour
 
     private void StartTurn()
     {
-        if(currentTurn == Turn.Player)
+        OnTurnChanged?.Invoke(currentTurn == Turn.Player ? Turn.Player : Turn.Enemy);
+        if (currentTurn == Turn.Player)
         {
             player.StartTurn();
         }
