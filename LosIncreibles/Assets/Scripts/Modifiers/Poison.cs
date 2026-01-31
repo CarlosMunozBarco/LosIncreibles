@@ -28,6 +28,11 @@ public class Poison : MonoBehaviour
         {
             targetEnemy.TakeDamage(damagePerTurn * posionStacks);
             posionStacks--;
+
+            if(posionStacks <= 0)
+            {
+                Destroy(this);
+            }
         }
     }
 }

@@ -30,6 +30,11 @@ public class Bandages : MonoBehaviour
         {
             CombatManager.Instance.player.Heal(5);
             bandagesStack--;
+
+            if(bandagesStack <= 0)
+            {
+                Destroy(this);
+            }
         }
     }
 

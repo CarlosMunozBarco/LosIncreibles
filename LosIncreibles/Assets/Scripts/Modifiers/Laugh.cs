@@ -4,18 +4,27 @@ public class Laugh : MonoBehaviour
 {
     private Enemy currentEnemy;
 
+    private void OnEnable()
+    {
+        TurnManager.OnTurnChanged += TriggerLaugh;
+    }
+
+    private void OnDisable()
+    {
+        TurnManager.OnTurnChanged -= TriggerLaugh;
+    }
+
     private void Awake()
     {
         currentEnemy = GetComponent<Enemy>();
     }
 
-    public void TriggerLaugh(Enemy enemy)
+    public void TriggerLaugh(Turn turn)
     {
-        if(enemy == currentEnemy)
+        if (turn == Turn.Enemy && currentEnemy != null)
         {
-            enemy.canPlayThisTurn = false;
+            currentEnemy.canPlayThisTurn = false;
             Destroy(this);
         }
-        
     }
 }
