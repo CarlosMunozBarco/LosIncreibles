@@ -1,5 +1,6 @@
 using System;
 using TMPro;
+using UnityEditor;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
@@ -18,8 +19,6 @@ public class CardUI : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, 
 
     private bool followMouse = false;
 
-    // Offset entre la posición del ratón y la carta en el momento del click,
-    // para que no se recentre la carta en el ratón al arrastrar.
     private Vector3 dragOffsetWorld;
     private Camera uiCamera;
 
@@ -52,6 +51,7 @@ public class CardUI : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, 
 
     public void OnPointerDown(PointerEventData eventData)
     {
+        GameManager.Instance.cardIsBeingHolded = true;
         followMouse = true;
 
         if (uiCamera == null)
@@ -63,11 +63,13 @@ public class CardUI : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, 
 
         var pointerWorld = uiCamera != null ? uiCamera.ScreenToWorldPoint(mouseWorld) : transform.position;
         dragOffsetWorld = transform.position - pointerWorld;
+
     }
 
     public void OnPointerUp(PointerEventData eventData)
     {
-        if(transform.localPosition.y >= YPositionToUseCard)
+        GameManager.Instance.cardIsBeingHolded = false;
+        if (transform.localPosition.y >= YPositionToUseCard)
         {
             PlayCard();
             return;
@@ -78,12 +80,14 @@ public class CardUI : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, 
 
     public void OnPointerEnter(PointerEventData eventData)
     {
-        HighlightCard();
+        if(!GameManager.Instance.cardIsBeingHolded)
+            HighlightCard();
     }
 
     public void OnPointerExit(PointerEventData eventData)
     {
-        UnhighlightCard();
+        if(!GameManager.Instance.cardIsBeingHolded)
+            UnhighlightCard();
     }
 
     public void HighlightCard()

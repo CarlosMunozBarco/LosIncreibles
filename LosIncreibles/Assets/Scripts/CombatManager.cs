@@ -5,6 +5,21 @@ public class CombatManager : MonoBehaviour
     public static CombatManager Instance;
 
     private Player player;
+    public Enemy currentEnemy;
+
+    private void OnEnable()
+    {
+        TurnManager.OnTurnChanged += HandleTurnChanged;
+        Enemy.OnEnemyDie += HandleEnemyDeath;
+
+    }
+
+    private void OnDisable()
+    {
+        TurnManager.OnTurnChanged -= HandleTurnChanged;
+        Enemy.OnEnemyDie -= HandleEnemyDeath;
+
+    }
 
     private void Awake()
     {
@@ -26,5 +41,19 @@ public class CombatManager : MonoBehaviour
     public Player GetPlayer()
     {
         return player;
+    }
+
+    public void HandleTurnChanged(Turn turn)
+    {
+        if(turn == Turn.Enemy)
+            currentEnemy = EnemyManager.Instance.GetFirstEnemy();
+    }
+
+    private void HandleEnemyDeath(Enemy deadEnemy)
+    {
+        if (currentEnemy == deadEnemy)
+        {
+            currentEnemy = EnemyManager.Instance.GetFirstEnemy();
+        }
     }
 }

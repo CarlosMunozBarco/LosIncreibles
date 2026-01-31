@@ -4,6 +4,7 @@ public class GameManager : MonoBehaviour
 {
 
     private bool isPaused;
+    public bool cardIsBeingHolded = false;
     // creamos la instancia del GameManager solo de lectura y modificación privada
     public static GameManager Instance {get; private set;}
 

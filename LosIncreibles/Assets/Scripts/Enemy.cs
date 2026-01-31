@@ -14,6 +14,10 @@ public class Enemy : MonoBehaviour, Turnable
     private bool isMyTurn = false;
     private bool hasActed = false;
 
+    private void Start()
+    {
+        currentHP = maxHP;
+    }
     private void Update()
     {
         if (isMyTurn && !hasActed)
