@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7e3f4f010174ded4bb780b42078277bf, type: 3}
+  m_Name: MysteryMask
+  m_EditorClassIdentifier: 
+  maskInfo: {fileID: 11400000, guid: 548b3a3928473b443a7dbec47f70f8d2, type: 2}
+  mysteryMaskTypes: 000000000100000002000000030000000400000005000000
+  numberOfIntents: 1
+  poisonStacksPerHit: 2
+  damagePerStack: 1
+  shieldAmount: 10

@@ -3,54 +3,28 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "MysteryMask", menuName = "Scriptable Objects/MysteryMask")]
+[CreateAssetMenu(fileName = "MysteryMask", menuName = "Masks/MysteryMask")]
 public class MysteryMask : Mask
 {
     public List<MysteryMaskType> mysteryMaskTypes;
-    public int numberOfIntents = 1;
-
-    [Header("Poison Mask Settings")]
-    public int poisonStacksPerHit = 2;
-    public float damagePerStack = 1f;
 
     public override void ApplyMaskEffect()
     {
-        throw new System.NotImplementedException();
+        Player player = CombatManager.Instance.player;
+        if(player.GetComponent<Mystery>() == null)
+        {
+            player.AddComponent<Mystery>().mysteryMaskTypes = mysteryMaskTypes;
+        }
     }
 
     public override void RemoveMaskEffect()
     {
-        throw new System.NotImplementedException();
-    }
-
-    private void ApplyPoison()
-    {
-        Enemy currentEnemy = CombatManager.Instance.currentEnemy;
-        if (currentEnemy != null)
+        Player player = CombatManager.Instance.player;
+        if (player.GetComponent<Mystery>() != null)
         {
-            if (currentEnemy.GetComponent<Poison>() != null)
-            {
-                currentEnemy.GetComponent<Poison>().posionStacks =
-                    currentEnemy.GetComponent<Poison>().posionStacks + poisonStacksPerHit;
-            }
-            else
-            {
-                currentEnemy.AddComponent<Poison>();
-                currentEnemy.GetComponent<Poison>().damagePerTurn = damagePerStack;
-                currentEnemy.GetComponent<Poison>().posionStacks = poisonStacksPerHit;
-            }
+            Destroy(player.GetComponent<Mystery>());
         }
     }
-
-
 }
 
-public enum MysteryMaskType
-{
-    Posion,
-    Shield,
-    Dodge,
-    Laugh,
-    Thorns,
-    Bandage
-}
+
