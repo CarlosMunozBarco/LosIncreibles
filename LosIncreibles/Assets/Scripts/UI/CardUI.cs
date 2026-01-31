@@ -23,6 +23,7 @@ public class CardUI : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, 
     private Camera uiCamera;
 
     private int siblingIndex = 0;
+    private Deck deck;
 
     public void Initialialize(Card card)
     {
@@ -30,6 +31,7 @@ public class CardUI : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, 
         cardNameText.text = card.info.cardName;
         cardDescriptionText.text = card.info.cardDescription;
         sprite.sprite = card.info.cardImage;
+        deck = GetComponentInParent<Deck>();
     }
 
     private void Start()
@@ -74,7 +76,8 @@ public class CardUI : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, 
     public void OnPointerUp(PointerEventData eventData)
     {
         GameManager.Instance.cardIsBeingHolded = false;
-        if (transform.localPosition.y >= YPositionToUseCard && TurnManager.Instance.currentTurn == Turn.Player)
+        if (transform.localPosition.y >= YPositionToUseCard && TurnManager.Instance.currentTurn == Turn.Player &&
+            deck.cardsRemainingToPlay > 0)
         {
             PlayCard();
             return;

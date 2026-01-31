@@ -73,9 +73,14 @@ public class UIManager : MonoBehaviour
         }
     }
 
+    public void UpdateCardsRemainingText(int cardsRemaining)
+    {
+        cardsText.text = $"{cardsRemaining.ToString()} / 4";
+    }
+
       /// <summary>
-    /// Metodo que reinicia la escena completa del juego
-    /// </summary>
+      /// Metodo que reinicia la escena completa del juego
+      /// </summary>
     public void OnRestartButtonPressed()
     {
         // cargamos la escena del juego

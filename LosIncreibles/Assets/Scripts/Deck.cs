@@ -10,6 +10,7 @@ public class Deck : MonoBehaviour
     public CardUI cardUI;
     public int cardsPerTurn = 8;
 
+    public int cardsRemainingToPlay = 4;
 
     private HorizontalLayoutGroup hlg;
 
@@ -30,6 +31,7 @@ public class Deck : MonoBehaviour
 
     public void RemoveCard(CardUI card)
     {
+        cardsRemainingToPlay--;
         cards.Remove(card);
     }
 
@@ -37,6 +39,8 @@ public class Deck : MonoBehaviour
     {
         if (turn == Turn.Player)
         {
+            cardsRemainingToPlay = 4;
+            UIManager.Instance.UpdateCardsRemainingText(cardsRemainingToPlay);
             DrawCards();
         }
     }
