@@ -14,9 +14,15 @@ public class Laugh : MonoBehaviour
         TurnManager.OnTurnChanged -= TriggerLaugh;
     }
 
+
     private void Awake()
     {
         currentEnemy = GetComponent<Enemy>();
+    }
+
+    private void Start()
+    {
+        TriggerLaugh(TurnManager.Instance.currentTurn);
     }
 
     public void TriggerLaugh(Turn turn)

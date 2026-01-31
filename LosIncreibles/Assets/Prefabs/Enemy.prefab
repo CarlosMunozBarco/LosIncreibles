@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 2591381222539803583}
   - component: {fileID: 9016662627254869783}
   - component: {fileID: 976179748384609154}
+  - component: {fileID: 1004745890631899249}
   m_Layer: 3
   m_Name: Enemy
   m_TagString: Untagged
@@ -106,6 +107,7 @@ MonoBehaviour:
   shield: 0
   damage: 15
   dodgeChance: 0
+  isBoss: 0
   canPlayThisTurn: 1
 --- !u!50 &9016662627254869783
 Rigidbody2D:
@@ -180,3 +182,15 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &1004745890631899249
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7543715638081864127}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6b938c9bd87677945a6749040d64167d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
