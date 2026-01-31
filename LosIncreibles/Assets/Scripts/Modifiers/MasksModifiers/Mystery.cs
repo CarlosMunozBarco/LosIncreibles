@@ -161,6 +161,10 @@ public class Mystery : MonoBehaviour
             bandage.AddBandagesStacks(1);
         }
     }
+    public void AddNumberOfIntents()
+    {
+        numberOfIntents++;
+    }
 }
 
 public enum MysteryMaskType

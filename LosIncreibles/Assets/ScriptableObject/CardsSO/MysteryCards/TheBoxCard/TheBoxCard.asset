@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 724a978c73ca3c94ebfc12785777c7fc, type: 3}
+  m_Name: TheBoxCard
+  m_EditorClassIdentifier: 
+  info: {fileID: 11400000, guid: 98a60c0761a5bcf4b8c27d06930ce92d, type: 2}
+  maskType: 0
+  damage: 10
