@@ -7,6 +7,7 @@ public class LaughingToKeepFromCryingCard : Card
     public int bandagesAmount = 3;
     public override void PlayCard()
     {
+        CombatManager.Instance.player.Heal(10f);
         if(CombatManager.Instance.player.GetComponent<Bandages>() == null)
         {
             CombatManager.Instance.player.AddComponent<Bandages>().bandagesStack = bandagesAmount;

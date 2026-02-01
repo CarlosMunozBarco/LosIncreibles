@@ -664,7 +664,7 @@ MonoBehaviour:
   - {fileID: 8789932026051483961, guid: 685c5ec8933abda4ba237f2ee4884a1b, type: 3}
   maxHP: 30
   shield: 0
-  damage: 10
+  damage: 15
   dodgeChance: 0
   isBoss: 0
   canPlayThisTurn: 1

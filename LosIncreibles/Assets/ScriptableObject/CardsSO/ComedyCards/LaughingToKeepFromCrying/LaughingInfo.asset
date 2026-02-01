@@ -14,6 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cardName: Restful Day
   cardImage: {fileID: 1488177564287491412, guid: 50a920171e2494346bdc1142245fca98, type: 3}
-  cardDescription: Gives you 3 bandages
+  cardDescription: Heal 10 hp and gives you 3 bandages
   thingsToShow:
   - {fileID: 2297170197685413898, guid: a03e6e0042fa66d40a1777cfeb76f40e, type: 3}

@@ -764,7 +764,7 @@ MonoBehaviour:
   - {fileID: 694143028133263238, guid: 62b2a4b25a75e054eba05e46919a4d3d, type: 3}
   - {fileID: 2790171361866463498, guid: b1e4eebed8112e6449e22d2b02971503, type: 3}
   - {fileID: 8789932026051483961, guid: 685c5ec8933abda4ba237f2ee4884a1b, type: 3}
-  maxHP: 40
+  maxHP: 75
   shield: 0
   damage: 15
   dodgeChance: 0
