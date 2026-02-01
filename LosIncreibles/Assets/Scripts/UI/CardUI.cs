@@ -106,7 +106,6 @@ public class CardUI : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, 
         originalPosition = transform.localPosition;
         transform.localScale = Vector3.one * 1.2f;
 
-        Debug.Log("Current position: " + transform.localPosition.x);
         if (transform.localPosition.x < limitX.x)
         {
             transform.localPosition = new Vector3(limitX.x, transform.localPosition.y, transform.localPosition.z);

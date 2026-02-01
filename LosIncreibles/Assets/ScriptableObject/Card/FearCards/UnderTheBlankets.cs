@@ -8,7 +8,7 @@ public class UnderTheBlankets : Card
     public override void PlayCard()
     {
         CombatManager.Instance.GetCurrentEnemy().TakeDamage(damage);
-        CombatManager.Instance.player.shield += shield;
+        CombatManager.Instance.player.UpdateShield(shield);
     }
 }
     

@@ -8,6 +8,6 @@ public class BehindYouCard : Card
     public override void PlayCard()
     {
         CombatManager.Instance.player.TakeDamage(damage);
-        CombatManager.Instance.player.shield += shield;
+        CombatManager.Instance.player.UpdateShield(shield);
     }
 }

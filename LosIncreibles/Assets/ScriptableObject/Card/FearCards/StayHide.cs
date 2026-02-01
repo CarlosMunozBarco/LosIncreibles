@@ -9,6 +9,6 @@ public class StayHide : Card
     public override void PlayCard()
     {
         CombatManager.Instance.GetCurrentEnemy().TakeDamage(damage);
-        CombatManager.Instance.player.dodgeChance += dodgeChance;
+        CombatManager.Instance.player.UpdateDodge(dodgeChance);
     }
 }

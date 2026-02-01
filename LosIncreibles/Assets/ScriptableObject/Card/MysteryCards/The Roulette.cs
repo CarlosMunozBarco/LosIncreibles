@@ -83,7 +83,7 @@ public class TheRoulette : Card
         Player player = CombatManager.Instance.player;
         if (player != null)
         {
-            player.shield += shieldAmount;
+            player.UpdateShield(shieldAmount);
         }
     }
 
@@ -93,7 +93,7 @@ public class TheRoulette : Card
         Player player = CombatManager.Instance.player;
         if (player != null)
         {
-            player.dodgeChance += 0.2f;
+            player.UpdateDodge(0.2f);
         }
         usedMaskTypes.Add(MysteryMaskType.Dodge);
     }

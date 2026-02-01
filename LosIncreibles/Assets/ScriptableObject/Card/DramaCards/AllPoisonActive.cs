@@ -8,9 +8,9 @@ public class AllPoisonActive : Card
     public int damage;
     public override void PlayCard()
     {
-        
+        Attack();
     }
-    public async void Attack()
+    public void Attack()
     {
         List<Enemy> enemies = EnemyManager.Instance.GetAllEnemies();
         for (int i = 0; i < enemies.Count; i++)
@@ -19,6 +19,7 @@ public class AllPoisonActive : Card
             enemies[i].TakeDamage(enemies[i].GetComponent<Poison>().poisonStacks);  
         }
     }    
+
     public void PoisonEnemy(Enemy enemy)
     {
         if (enemy != null)
