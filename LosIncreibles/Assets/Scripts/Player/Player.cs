@@ -20,9 +20,19 @@ public class Player : MonoBehaviour, Turnable
     private float currentHP;
 
     private float dodgeChance = 0f;
+    private Animator animator;
 
-    
-   
+    private float nextAttackDamage = 0;
+
+    private void Start()
+    {
+        currentHP = maxHP;
+        UIManager.Instance.UpdateHealthUI(currentHP, maxHP);
+        UIManager.Instance.UpdateShieldUI(shield, maxHP);
+        currentIcons = new List<IconType>();
+        animator = GetComponent<Animator>();
+    }
+
 
     private void Update()
     {
@@ -114,12 +124,7 @@ public class Player : MonoBehaviour, Turnable
         if (dodgeChance > 1) dodgeChance = 1;
     }
 
-    private void Start()
-    {
-        currentHP = maxHP;
-        UIManager.Instance.UpdateHealthUI(currentHP, maxHP);
-        currentIcons = new List<IconType>();
-    } 
+    
 
     public void EndTurn()
     {
@@ -134,7 +139,13 @@ public class Player : MonoBehaviour, Turnable
 
     public void Attack(float damage)
     {
-        CombatManager.Instance.GetCurrentEnemy().TakeDamage(damage);
+        animator.SetTrigger("Attack");
+        nextAttackDamage = damage;
+    }
+
+    public void DealDamage()
+    {
+        CombatManager.Instance.GetCurrentEnemy().TakeDamage(nextAttackDamage);
         OnPlayerAttack?.Invoke();
     }
 
@@ -154,6 +165,7 @@ public class Player : MonoBehaviour, Turnable
 
         currentHP -= effectiveDamage;
         UIManager.Instance.UpdateHealthUI(currentHP, maxHP);
+        UIManager.Instance.UpdateShieldUI(shield, maxHP);
         if (currentHP <= 0)
         {
             GameManager.Instance.PlayerDeath();
@@ -167,6 +179,7 @@ public class Player : MonoBehaviour, Turnable
         {
             GameManager.Instance.PlayerDeath();
         }
+        UIManager.Instance.UpdateHealthUI(currentHP, maxHP);
     }
 
 
@@ -177,5 +190,6 @@ public class Player : MonoBehaviour, Turnable
         {
             currentHP = maxHP;
         }
+        UIManager.Instance.UpdateHealthUI(currentHP, maxHP);
     }
 }
