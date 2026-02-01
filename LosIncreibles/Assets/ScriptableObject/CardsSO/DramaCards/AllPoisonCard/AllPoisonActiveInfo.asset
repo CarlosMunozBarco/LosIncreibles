@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: AllPoisonActiveInfo
   m_EditorClassIdentifier: 
   cardName: All poison active
-  cardImage: {fileID: -657743534937632540, guid: 298c27ef3bd19954f976d42b5dcea5ec, type: 3}
+  cardImage: {fileID: 1018494221727411736, guid: a2d5fffcad3175e4d8a0f1cc4cc9370f, type: 3}
   cardDescription: Apply 1 poison to all enemies and active poison Damage
   thingsToShow:
   - {fileID: 1457099062892637502, guid: f2875246983ce254d9c14882ea458d1d, type: 3}
