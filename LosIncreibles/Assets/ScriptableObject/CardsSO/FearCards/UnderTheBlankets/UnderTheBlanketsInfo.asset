@@ -14,4 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cardName: Under The Blankets
   cardImage: {fileID: 0}
-  cardDescription: you gain 10 shield and inflict 5 damage
+  cardDescription: Gain 10 Shield. Deal 5 damage.
+  thingsToShow: []

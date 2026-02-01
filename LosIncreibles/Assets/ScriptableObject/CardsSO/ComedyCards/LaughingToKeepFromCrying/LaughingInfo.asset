@@ -12,6 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6f36b2bc7cde8454a8d6a2ed8bff2905, type: 3}
   m_Name: LaughingInfo
   m_EditorClassIdentifier: 
-  cardName: Laughing to keep from crying
+  cardName: Restful Day
   cardImage: {fileID: 0}
   cardDescription: Gives you 3 bandages
+  thingsToShow:
+  - {fileID: 2297170197685413898, guid: a03e6e0042fa66d40a1777cfeb76f40e, type: 3}

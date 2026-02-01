@@ -13,5 +13,6 @@ MonoBehaviour:
   m_Name: DefaultMaskInfo
   m_EditorClassIdentifier: 
   maskType: 4
-  maskName: Does nothing
+  maskName: DEFAULT
   maskDescription: You don't have a mask right now
+  thingsToShow: {fileID: 1635948255337332181, guid: 83afb3261339b9849a7db81f0ff2f4e1, type: 3}

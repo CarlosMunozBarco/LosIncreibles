@@ -15,3 +15,5 @@ MonoBehaviour:
   cardName: Double Poison
   cardImage: {fileID: 0}
   cardDescription: Double the poison stack of 1 enemy
+  thingsToShow:
+  - {fileID: 1457099062892637502, guid: f2875246983ce254d9c14882ea458d1d, type: 3}

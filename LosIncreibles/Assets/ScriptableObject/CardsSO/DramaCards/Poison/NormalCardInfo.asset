@@ -12,6 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6f36b2bc7cde8454a8d6a2ed8bff2905, type: 3}
   m_Name: NormalCardInfo
   m_EditorClassIdentifier: 
-  cardName: NormalCard
+  cardName: Rotting Food
   cardImage: {fileID: 0}
-  cardDescription: Poison
+  cardDescription: Gives one enemy 2 stack of Poison
+  thingsToShow:
+  - {fileID: 1457099062892637502, guid: f2875246983ce254d9c14882ea458d1d, type: 3}

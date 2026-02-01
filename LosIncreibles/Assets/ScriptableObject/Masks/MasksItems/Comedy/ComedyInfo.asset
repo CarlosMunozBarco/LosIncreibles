@@ -12,10 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f3a7cd7876595ec45acd6102ae192ebc, type: 3}
   m_Name: ComedyInfo
   m_EditorClassIdentifier: 
-  maskType: 0
-  maskName: Mistery
+  maskType: 1
+  maskName: Comedy
   maskDescription: 'Your attacks have 50% chance of apply "Laugh" to the enemy.
 
     If
     the enemy already have "Laugh", the attack does 5 additional damage and heals
     the player 5 hp.'
+  thingsToShow: {fileID: 7421818867751628120, guid: b27c5b88273d1ac46a881031ea1ebf9c, type: 3}

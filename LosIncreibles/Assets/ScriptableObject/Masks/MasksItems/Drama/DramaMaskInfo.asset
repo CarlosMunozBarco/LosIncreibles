@@ -15,3 +15,4 @@ MonoBehaviour:
   maskType: 3
   maskName: Drama
   maskDescription: Apply posion everytime you attack an enemy
+  thingsToShow: {fileID: 4089951929747569703, guid: 97e001f9632de8244896ec93e114627c, type: 3}

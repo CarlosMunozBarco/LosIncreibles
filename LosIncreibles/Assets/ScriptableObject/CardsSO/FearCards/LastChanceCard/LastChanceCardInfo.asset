@@ -14,4 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cardName: LAST CHANCE
   cardImage: {fileID: 0}
-  cardDescription: You inflict 30 damage but receive 15 damage
+  cardDescription: Deal 30 damage. Lose 15 HP.
+  thingsToShow: []

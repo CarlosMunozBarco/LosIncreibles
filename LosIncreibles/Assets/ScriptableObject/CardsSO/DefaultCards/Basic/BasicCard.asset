@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   info: {fileID: 11400000, guid: f6d7723d863a38c418f3507ba0a571e6, type: 2}
   maskType: 4
-  damage: 50
+  damage: 10

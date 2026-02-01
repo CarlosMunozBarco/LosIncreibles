@@ -15,3 +15,5 @@ MonoBehaviour:
   cardName: It Dosent Hurt
   cardImage: {fileID: 0}
   cardDescription: 'Give you 10 shield and 3 poison '
+  thingsToShow:
+  - {fileID: 1457099062892637502, guid: f2875246983ce254d9c14882ea458d1d, type: 3}

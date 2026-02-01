@@ -14,4 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cardName: Behind you
   cardImage: {fileID: 0}
-  cardDescription: you recieve 10 damage and after 20 of shield
+  cardDescription: Lose 10 HP, but gain 20 Shield
+  thingsToShow: []
