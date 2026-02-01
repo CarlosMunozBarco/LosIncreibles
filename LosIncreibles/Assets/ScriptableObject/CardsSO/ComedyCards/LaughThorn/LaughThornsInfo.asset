@@ -12,7 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6f36b2bc7cde8454a8d6a2ed8bff2905, type: 3}
   m_Name: LaughThornsInfo
   m_EditorClassIdentifier: 
-  cardName: Laugh
+  cardName: Punchline
   cardImage: {fileID: 0}
-  cardDescription: "Realiza un ataque con 10 de da\xF1o, si el enemigo tiene \"laugh\"
-    obtienes 5 Thorns"
+  cardDescription: Deals 10 damage to one enemy. if the enemy has Laugh, it gives
+    you 5 Thorns
+  thingsToShow:
+  - {fileID: 8628708215511912629, guid: 386260b08c4f2c341b01fbe93e80d5e7, type: 3}
+  - {fileID: 2736324593940805766, guid: 7a3e27d63f8b2da41b86056d085c730a, type: 3}

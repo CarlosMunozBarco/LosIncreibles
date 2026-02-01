@@ -12,6 +12,8 @@ public class CardUI : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, 
     public TMP_Text cardDescriptionText;
     public Image sprite;
     public Vector2 limitX;
+    public Image cardMask;
+    public GameObject thingsToShow;
 
     public Card card;
     public float cardHeightIncrease = 400f;
@@ -33,13 +35,26 @@ public class CardUI : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, 
         cardDescriptionText.text = card.info.cardDescription;
         sprite.sprite = card.info.cardImage;
         deck = GetComponentInParent<Deck>();
+
+        foreach(var thing in card.info.thingsToShow)
+        {
+            Instantiate(thing, thingsToShow.transform);
+        }
     }
 
     private void Start()
     {
         uiCamera = Camera.main;
         siblingIndex = transform.GetSiblingIndex();
-
+        if(card.maskType != MaskType.Default)
+        {
+            cardMask.CrossFadeAlpha(1f, 0f, true);
+            cardMask.sprite = UIManager.Instance.GetMaskImage(card.maskType);
+        }
+        else
+        {
+            cardMask.CrossFadeAlpha(0f, 0f, true);
+        }
     }
 
     private void Update()

@@ -15,3 +15,5 @@ MonoBehaviour:
   cardName: Thorns
   cardImage: {fileID: 0}
   cardDescription: You recieve 5 thorns
+  thingsToShow:
+  - {fileID: 8628708215511912629, guid: 386260b08c4f2c341b01fbe93e80d5e7, type: 3}

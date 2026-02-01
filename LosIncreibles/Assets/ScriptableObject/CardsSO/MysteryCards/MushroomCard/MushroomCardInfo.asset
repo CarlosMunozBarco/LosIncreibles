@@ -14,4 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cardName: Mushrooms
   cardImage: {fileID: 0}
-  cardDescription: 50% heal 15 hp, 49% take 10 damage, 1% heal full hp
+  cardDescription: 50% heal 15 hp, 49% lose 10 HP, 1% heal full hp
+  thingsToShow: []

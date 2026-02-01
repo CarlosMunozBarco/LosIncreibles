@@ -14,4 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cardName: BrokenSword
   cardImage: {fileID: 0}
-  cardDescription: You make random damege in 1 hit (5 to 25)
+  cardDescription: Deals a random amount of damage (5-25)
+  thingsToShow: []

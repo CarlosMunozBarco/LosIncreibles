@@ -32,6 +32,7 @@ public class UIManager : MonoBehaviour
 
     [Header("MASKS")]
     public TMP_Text currentMask;
+    public GameObject thingsToShow;
 
     [Header("TURN")]
     public TMP_Text turnText;
@@ -84,6 +85,8 @@ public class UIManager : MonoBehaviour
         victoryUIObject.SetActive(false);
         // desactivamos la interfaz de pausa
         pauseUIObject.SetActive(false);
+
+        UpdateMaskImage(MaskManager.Instance.currentMask.maskInfo.maskType);
     }
     void Update()
     {
@@ -96,18 +99,35 @@ public class UIManager : MonoBehaviour
         }
     }
 
+    public Sprite GetMaskImage(MaskType maskType)
+    {
+        MaskToImage maskToImage = maskToImages.Find(m => m.maskType == maskType);
+        return maskToImage.maskSprite;
+    }
+
     private void UpdateMaskImage(MaskType newMask)
     {
         MaskToImage maskToImage = maskToImages.Find(m => m.maskType == newMask);
         if (maskToImage.maskSprite != null)
         {
             maskImage.sprite = maskToImage.maskSprite;
-            maskImage.CrossFadeAlpha(1f, 0.5f, false);
+            maskImage.CrossFadeAlpha(1f, 0f, false);
+            Debug.Log("Mascara cambiada a: " + newMask.ToString() + " Image alpha: " + maskImage.color.a);
         }
         else
         {
-            maskImage.CrossFadeAlpha(0f, 0.5f, false);
+            maskImage.CrossFadeAlpha(0f, 0f, false);
         }
+
+        for(int i = 0; i < thingsToShow.transform.childCount; i++)
+        {
+            Destroy(thingsToShow.transform.GetChild(i).gameObject);
+        }
+
+        GameObject thingToShow = MaskManager.Instance.currentMask.maskInfo.thingsToShow;
+        Instantiate(thingToShow, thingsToShow.transform);
+
+        UpdateMaskUI();
     }
 
     /// <summary>
@@ -204,9 +224,9 @@ public class UIManager : MonoBehaviour
 
     }
 
-    public void UpdateMaskUI(string maskName)
+    public void UpdateMaskUI()
     {
-        currentMask.text = maskName;
+        currentMask.text = MaskManager.Instance.currentMask.maskInfo.maskName;
     }
 
     public void UpdateTurnUI(string turnName)

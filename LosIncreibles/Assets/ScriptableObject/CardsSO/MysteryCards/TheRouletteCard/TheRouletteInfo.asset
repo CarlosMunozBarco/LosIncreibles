@@ -14,4 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cardName: The roulette
   cardImage: {fileID: 0}
-  cardDescription: You give random effects 1 to 10 times
+  cardDescription: Give  random effects 1 to 10 times
+  thingsToShow: []

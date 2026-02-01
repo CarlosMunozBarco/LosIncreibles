@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cardName: The box
   cardImage: {fileID: 0}
-  cardDescription: 50% chance to hit enemy, if succes you trigger the card one more
-    time until you fail
+  cardDescription: 50% chance to hit enemy. If succes, triggers once more, indefinitely.
+  thingsToShow: []

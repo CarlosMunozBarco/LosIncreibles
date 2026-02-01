@@ -14,4 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cardName: Stay Hide
   cardImage: {fileID: 0}
-  cardDescription: 'You win 5% percent chance to dodge and inflict 5 damage '
+  cardDescription: 'You win 5% chance of dodge enemy attacks. Inflict 5 damage '
+  thingsToShow: []

@@ -29,3 +29,4 @@ MonoBehaviour:
     - Gives you Thorn
 
     - Gives you Bandage'
+  thingsToShow: {fileID: 6733930832015994474, guid: 5183c5042c02623488d06779e20fdb92, type: 3}

@@ -15,3 +15,5 @@ MonoBehaviour:
   cardName: BandageCard
   cardImage: {fileID: 0}
   cardDescription: Give you 2 bandages
+  thingsToShow:
+  - {fileID: 2297170197685413898, guid: a03e6e0042fa66d40a1777cfeb76f40e, type: 3}
