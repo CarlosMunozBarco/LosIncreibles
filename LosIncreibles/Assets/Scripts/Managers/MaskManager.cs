@@ -8,6 +8,16 @@ public class MaskManager : MonoBehaviour
 
     public Mask currentMask;
 
+    private void OnEnable()
+    {
+        CardUI.OnCardPlayed += HandleCardPlayed;
+    }
+
+    private void OnDisable()
+    {
+        CardUI.OnCardPlayed -= HandleCardPlayed;
+    }
+
     private void Awake()
     {
         if (Instance == null)
