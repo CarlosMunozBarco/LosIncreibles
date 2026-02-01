@@ -14,6 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   info: {fileID: 11400000, guid: 3a6f5d5b61c544a4da8b1c6e01cdfa40, type: 2}
   maskType: 4
-  currentMask: {fileID: 0}
+  currentMask: {fileID: 11400000, guid: 7745c9ddf0f6b2a4db84dd8e4ab87d38, type: 2}
   nextMask: {fileID: 11400000, guid: 3c47a9d6fc29e1b43bb40a457ed842d1, type: 2}
   damage: 5
