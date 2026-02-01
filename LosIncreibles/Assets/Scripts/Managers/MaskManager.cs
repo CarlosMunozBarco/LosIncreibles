@@ -1,8 +1,11 @@
+using System;
 using UnityEngine;
 
 public class MaskManager : MonoBehaviour
 {
     public static MaskManager Instance;
+    public static event Action<MaskType> OnMaskUpdated;
+
     public Mask currentMask;
 
     private void Awake()
@@ -29,6 +32,7 @@ public class MaskManager : MonoBehaviour
         QuitMask();
         EquipMask(newMask);
         UIManager.Instance.UpdateMaskUI(newMask.maskInfo.maskName);
+        OnMaskUpdated?.Invoke(newMask.maskInfo.maskType);
     }
 
     private void QuitMask()
@@ -60,7 +64,8 @@ public class MaskManager : MonoBehaviour
 
     private void ApplyDebuff(MaskType playedMaskType)
     {
-        switch(playedMaskType)
+        Debug.Log("Applying Debuff for playing mask type: " + playedMaskType.ToString());
+        switch (playedMaskType)
         {
             case MaskType.Mystery:
                 MysteryDebuff();
@@ -112,7 +117,7 @@ public class MaskManager : MonoBehaviour
 
     private void MysteryDebuff()
     {
-        if(Random.value < 0.5f)
+        if(UnityEngine.Random.value < 0.5f)
         {
             CombatManager.Instance.player.TakeDamage(5);
         }

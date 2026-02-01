@@ -17,11 +17,14 @@ public class MultipleHitCard : Card
         {
             enemies[i].TakeDamage(damage);  
         }
+
+        CombatManager.Instance.player.Attack(0);
         await Task.Delay(500);
 
         for (int i = 0; i < enemies.Count; i++)
         {
             enemies[i].TakeDamage(damage);  
         }
+        CombatManager.Instance.player.Attack(0);
     }
 }

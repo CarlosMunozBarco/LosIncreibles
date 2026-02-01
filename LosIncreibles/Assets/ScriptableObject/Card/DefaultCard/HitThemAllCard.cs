@@ -9,6 +9,7 @@ public class HitThemAllCard : Card
         foreach(Enemy enemy in EnemyManager.Instance.GetAllEnemies())
         {
             enemy.TakeDamage(damage);
+            CombatManager.Instance.player.Attack(0);
         }
 
     }

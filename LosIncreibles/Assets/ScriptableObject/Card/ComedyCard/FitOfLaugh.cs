@@ -13,28 +13,29 @@ public class FitOfLaugh : Card
 
     public async void DealDamage()
     {
+        Player player = CombatManager.Instance.GetPlayer();
         Enemy enemy = CombatManager.Instance.GetCurrentEnemy();
 
-        if(enemy.GetComponent<Laugh>() != null)
+        if (enemy.GetComponent<Laugh>() != null)
         {
-            enemy.TakeDamage(2 * damage);
+            player.Attack(2 * damage);
         }
         else
         {
-            enemy.TakeDamage(damage);
+            player.Attack(damage);
         }
 
         await Task.Delay(500);  
 
         enemy = CombatManager.Instance.GetCurrentEnemy();
 
-        if(enemy.GetComponent<Laugh>() != null)
+        if (enemy.GetComponent<Laugh>() != null)
         {
-            enemy.TakeDamage(2 * damage);
+            player.Attack(2 * damage);
         }
         else
         {
-            enemy.TakeDamage(damage);
+            player.Attack(damage);
         }
     }
 }

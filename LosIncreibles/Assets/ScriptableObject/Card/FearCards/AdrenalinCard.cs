@@ -6,6 +6,6 @@ public class AdrenalinCard : Card
     public int damage = 20;
     public override void PlayCard()
     {
-        CombatManager.Instance.GetCurrentEnemy().TakeDamage(damage);
+        CombatManager.Instance.player.Attack(damage);
     }
 }

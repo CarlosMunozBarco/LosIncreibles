@@ -18,6 +18,7 @@ public class AllPoisonActive : Card
             PoisonEnemy(enemies[i]);
             enemies[i].TakeDamage(enemies[i].GetComponent<Poison>().poisonStacks);  
         }
+        CombatManager.Instance.player.Attack(0);
     }    
 
     public void PoisonEnemy(Enemy enemy)

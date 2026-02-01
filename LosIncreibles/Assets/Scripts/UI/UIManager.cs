@@ -1,4 +1,5 @@
 using JetBrains.Annotations;
+using System.Collections.Generic;
 using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
@@ -35,6 +36,10 @@ public class UIManager : MonoBehaviour
     [Header("TURN")]
     public TMP_Text turnText;
 
+    [Header("Mask")]
+    public List<MaskToImage> maskToImages;
+    public Image maskImage;
+
     private static UIManager instance;
     public static UIManager Instance
     {
@@ -44,7 +49,17 @@ public class UIManager : MonoBehaviour
         }
     }
 
-     void Awake()
+    private void OnEnable()
+    {
+        MaskManager.OnMaskUpdated += UpdateMaskImage;
+    }
+
+    private void OnDisable()
+    {
+        MaskManager.OnMaskUpdated -= UpdateMaskImage;
+    }
+
+    void Awake()
     {
         // si la instancia es nula...
         if (instance == null)
@@ -80,6 +95,25 @@ public class UIManager : MonoBehaviour
             pausedGame = !pausedGame;   
         }
     }
+
+    private void UpdateMaskImage(MaskType newMask)
+    {
+        MaskToImage maskToImage = maskToImages.Find(m => m.maskType == newMask);
+        if (maskToImage.maskSprite != null)
+        {
+            maskImage.sprite = maskToImage.maskSprite;
+            maskImage.CrossFadeAlpha(1f, 0.5f, false);
+        }
+        else
+        {
+            maskImage.CrossFadeAlpha(0f, 0.5f, false);
+        }
+    }
+
+    /// <summary>
+    /// Metodo que recibe el número actual de cartas restantes y actualiza el texto en pantalla
+    /// </summary>
+    /// <param name="cardsRemaining"></param>
 
     public void UpdateCardsRemainingText(int cardsRemaining)
     {
@@ -179,4 +213,11 @@ public class UIManager : MonoBehaviour
     {
         turnText.text = turnName;
     }
+}
+
+[System.Serializable]
+public struct MaskToImage
+{
+    public MaskType maskType;
+    public Sprite maskSprite;
 }

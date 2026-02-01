@@ -13,7 +13,7 @@ public class FocusTimeCard : Card
     {
         for (int i = 0; i < 5; i++)
         {
-            CombatManager.Instance.GetCurrentEnemy().TakeDamage(damage);
+            CombatManager.Instance.GetPlayer().Attack(damage);
             await Task.Delay(300);
         }
     }

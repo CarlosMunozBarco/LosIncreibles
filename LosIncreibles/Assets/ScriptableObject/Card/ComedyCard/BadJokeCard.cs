@@ -13,11 +13,11 @@ public class BadJokeCard : Card
             {
                 enemy.TakeDamage(potenciedDamage);
             }
+            CombatManager.Instance.player.Attack(0);
         }
         else
         {
-
-            CombatManager.Instance.GetCurrentEnemy().TakeDamage(normalDamage);
+            CombatManager.Instance.player.Attack(normalDamage);
         }
     }
 }
