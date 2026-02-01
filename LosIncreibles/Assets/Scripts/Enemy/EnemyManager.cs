@@ -64,7 +64,6 @@ public class EnemyManager : MonoBehaviour
         currentEnemies.Remove(deadEnemy);
         if(currentEnemies.Count <= 0)
         {
-            currentWaveIndex++;
             SpawnWave();
         }
     }

@@ -7,7 +7,8 @@ public class BandangeCard : Card
     public int bandageStacks;
     public override void PlayCard()
     {
-        if(CombatManager.Instance.player != null)
+        CombatManager.Instance.GetPlayer().Heal(10f);
+        if (CombatManager.Instance.player != null)
         {
             if(CombatManager.Instance.player.GetComponent<Bandages>() != null)
             {
