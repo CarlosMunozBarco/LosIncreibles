@@ -60,14 +60,14 @@ public class GameManager : MonoBehaviour
         // La escala de tiempo será 0 si esta pausado y 1 si no lo esta
         // Variables ternarias -> cambiar el valor de una variable en base a una condicion
         // variable = condicion ? valor si se cumple : valor si no se cumple
-        Time.timeScale = isPaused ? 0f : 1f;
+        //Time.timeScale = isPaused ? 0f : 1f;
     }
 
     public void PauseInput()
     {
         StopGame();
         // muestra la interfaz de pausa
-        UIManager.Instance.TogglePauseUI(isPaused);
+        UIManager.Instance.TogglePauseUI(!isPaused);
     }
     public void PlayerDeath()
     {
