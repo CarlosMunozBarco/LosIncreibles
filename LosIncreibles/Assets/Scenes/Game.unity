@@ -2830,9 +2830,9 @@ MonoBehaviour:
   - maskType: 1
     maskSprite: {fileID: 1718022919013959072, guid: 49772b670060a924a9807b54856b9163, type: 3}
   - maskType: 0
-    maskSprite: {fileID: 6034923386691473652, guid: 2fd6ff0ac6b99404aaf12b3d21e34d2d, type: 3}
+    maskSprite: {fileID: -4854304133013331292, guid: 323b76e998148a742ad08dc43ca0fb1c, type: 3}
   - maskType: 2
-    maskSprite: {fileID: 2758947750998448378, guid: a2c0bc50dbd243f4799b1e17707ea3ad, type: 3}
+    maskSprite: {fileID: 6793970753442884158, guid: 48d17ea334a1d6d47be41843faff096b, type: 3}
   - maskType: 3
     maskSprite: {fileID: 5598830340457129074, guid: f400978b267e2fb4f9eb166242711feb, type: 3}
   - maskType: 4
@@ -4900,6 +4900,7 @@ MonoBehaviour:
   comedyMusic: {fileID: 8300000, guid: 5b7c7c033ba61b349ab56de36dbdae13, type: 3}
   fearMusic: {fileID: 8300000, guid: 214e7132d9adef747911285d7ac06136, type: 3}
   bossMusic: {fileID: 8300000, guid: 94dc4d8f1f158144cb33bdd89f7e3379, type: 3}
+  defaultMusic: {fileID: 8300000, guid: badc3703b64f95a4d882debc7d5d62f3, type: 3}
   failSFX: {fileID: 8300000, guid: 12babf90d2156944798b9e0ee4763730, type: 3}
   rewardSFX: {fileID: 8300000, guid: c6b6aa96d8a3e144fb2a79f68e5b9028, type: 3}
   attackSFX: {fileID: 8300000, guid: 2c64053bbd9ac164380bc5356a3aa44f, type: 3}

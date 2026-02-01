@@ -8,6 +8,7 @@ public class Player : MonoBehaviour, Turnable
 {
     public static event Action OnPlayerAttack;
     public static event Action<Turnable> OnTurnEnd;
+    public static event Action OnPlayerDeath;
 
     public GameObject iconsHolder;
     public List<IconImage> icons;
@@ -170,6 +171,7 @@ public class Player : MonoBehaviour, Turnable
         if (currentHP <= 0)
         {
             GameManager.Instance.PlayerDeath();
+            Destroy(gameObject);
         }
     }
 

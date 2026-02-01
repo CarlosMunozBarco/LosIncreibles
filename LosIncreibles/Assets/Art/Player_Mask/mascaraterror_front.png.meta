@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 2fd6ff0ac6b99404aaf12b3d21e34d2d
+guid: 48d17ea334a1d6d47be41843faff096b
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 6034923386691473652
-    second: EspinasIcono_0
+      213: 6793970753442884158
+    second: mascaraterror_front_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -126,13 +126,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: EspinasIcono_0
+      name: mascaraterror_front_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 60
-        height: 60
+        x: 29
+        y: 6
+        width: 179
+        height: 192
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -141,8 +141,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 4f0517688da50c350800000000000000
-      internalID: 6034923386691473652
+      spriteID: e3a2b5d7768094e50800000000000000
+      internalID: 6793970753442884158
       vertices: []
       indices: 
       edges: []
@@ -161,7 +161,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      EspinasIcono_0: 6034923386691473652
+      mascaraterror_front_0: 6793970753442884158
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

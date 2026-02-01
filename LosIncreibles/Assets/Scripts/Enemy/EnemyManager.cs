@@ -6,6 +6,7 @@ using UnityEngine;
 public class EnemyManager : MonoBehaviour
 {
     public static event Action OnWaveSpawned;
+    public static event Action OnBossSpawned;
     public static EnemyManager Instance;
 
     public List<Transform> enemySpawnPoints;
@@ -84,7 +85,16 @@ public class EnemyManager : MonoBehaviour
         }
 
         currentWaveIndex++;
-        OnWaveSpawned?.Invoke();
+
+        if(currentWaveIndex == waves.Count)
+        {
+            OnBossSpawned?.Invoke();
+            SoundsManager.Instance.PlayMusic(MusicType.Boss);
+            Debug.Log("Boss Wave Spawned!");
+        }
+        else
+            OnWaveSpawned?.Invoke();
+
         Debug.Log("Current Enemies Count: " + currentEnemies.Count);
     }
 

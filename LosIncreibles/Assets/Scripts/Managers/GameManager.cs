@@ -5,6 +5,8 @@ public class GameManager : MonoBehaviour
 
     private bool isPaused;
     public bool cardIsBeingHolded = false;
+
+
     // creamos la instancia del GameManager solo de lectura y modificación privada
     public static GameManager Instance {get; private set;}
 
@@ -20,6 +22,17 @@ public class GameManager : MonoBehaviour
             Destroy(gameObject);
         }
     }
+
+    private void OnEnable()
+    {
+        Enemy.OnEnemyDie += FinishGame;
+    }
+
+    private void OnDisable()
+    {
+        Enemy.OnEnemyDie -= FinishGame;
+    }
+
     void Start()
     {
         // iniciamos en falso
@@ -27,6 +40,14 @@ public class GameManager : MonoBehaviour
         // activamos el tiempo de juego a 1 = no esta pausado
         Time.timeScale = 1f;
         
+    }
+
+    public void FinishGame(Enemy enemy)
+    {
+        if(enemy.isBoss)
+        {
+            EndGame();
+        }
     }
 
     /// <summary>

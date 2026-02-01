@@ -12,6 +12,7 @@ public class SoundsManager : MonoBehaviour
     public AudioClip comedyMusic;
     public AudioClip fearMusic;
     public AudioClip bossMusic;
+    public AudioClip defaultMusic;
 
     public AudioClip failSFX;
     public AudioClip rewardSFX;
@@ -31,7 +32,7 @@ public class SoundsManager : MonoBehaviour
             DontDestroyOnLoad(this.gameObject);
         }
 
-        PlayMusic(MusicType.Boss);
+        PlayMusic(MusicType.Default);
     }
 
     private void OnEnable()
@@ -91,6 +92,7 @@ public class SoundsManager : MonoBehaviour
                 SFX.pitch = Random.Range(0.8f, 1.2f);
                 SFX.PlayOneShot(uiSFX);
                 break;
+
         }
     }
 
@@ -110,6 +112,9 @@ public class SoundsManager : MonoBehaviour
             case MaskType.Terror:
                 PlayMusic(MusicType.Fear);
                 break;
+            case MaskType.Default:
+                PlayMusic(MusicType.Default);
+                break;
         }
     }
 }
@@ -120,7 +125,8 @@ public enum MusicType
     Mystery,
     Comedy,
     Fear,
-    Boss
+    Boss,
+    Default
 }
 
 public enum SFXType
