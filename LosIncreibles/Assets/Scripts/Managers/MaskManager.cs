@@ -74,6 +74,7 @@ public class MaskManager : MonoBehaviour
     private void ApplyDebuff(MaskType playedMaskType)
     {
         Debug.Log("Applying Debuff for playing mask type: " + playedMaskType.ToString());
+        SoundsManager.Instance.PlaySFX(SFXType.Fail);
         switch (playedMaskType)
         {
             case MaskType.Mystery:

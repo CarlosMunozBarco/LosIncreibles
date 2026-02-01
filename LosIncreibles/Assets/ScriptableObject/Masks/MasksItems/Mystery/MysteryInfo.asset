@@ -30,3 +30,4 @@ MonoBehaviour:
 
     - Gives you Bandage'
   thingsToShow: {fileID: 6733930832015994474, guid: 5183c5042c02623488d06779e20fdb92, type: 3}
+  debuff: {fileID: 8387917704481972126, guid: b48bb165e294aac45bce3a5964306bc4, type: 3}

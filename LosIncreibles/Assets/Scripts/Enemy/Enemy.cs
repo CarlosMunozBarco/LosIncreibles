@@ -125,6 +125,7 @@ public class Enemy : MonoBehaviour, Turnable
     public void Attack()
     {
         animator.SetTrigger("Attack");
+        SoundsManager.Instance.PlaySFX(SFXType.Attack);
     }
 
     public void AttackPlayer()
@@ -172,6 +173,7 @@ public class Enemy : MonoBehaviour, Turnable
     private void Die()
     {
         hasDied = true;
+        SoundsManager.Instance.PlaySFX(SFXType.Reward);
         OnEnemyDie.Invoke(this);
         Destroy(gameObject);
     }
@@ -199,7 +201,7 @@ public class Enemy : MonoBehaviour, Turnable
         if (shield > 0)
         {
             shieldUI.gameObject.SetActive(true);
-            shieldUI.value = shield;
+            shieldUI.value = shield / maxHP;
         }
         else
         {

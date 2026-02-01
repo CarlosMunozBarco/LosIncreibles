@@ -1,4 +1,5 @@
 using NUnit.Framework;
+using System.Collections.Generic;
 using UnityEngine;
 
 [CreateAssetMenu(fileName = "MaskInfo", menuName = "Scriptable Objects/MaskInfo")]
@@ -9,6 +10,8 @@ public class MaskInfo : ScriptableObject
     [TextArea]public string maskDescription;
 
     public GameObject thingsToShow;
+    public GameObject debuff;
+
 }
 
 public enum MaskType

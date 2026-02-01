@@ -144,6 +144,7 @@ public class CardUI : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, 
 
     public void PlayCard()
     {
+        SoundsManager.Instance.PlaySFX(SFXType.UI);
         card.PlayCard();
         OnCardPlayed?.Invoke(this);
         Destroy(gameObject);

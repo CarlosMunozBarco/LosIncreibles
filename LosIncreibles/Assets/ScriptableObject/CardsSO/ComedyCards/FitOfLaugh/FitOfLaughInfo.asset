@@ -14,7 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cardName: Fit Of Laugh
   cardImage: {fileID: 0}
-  cardDescription: Attack one enemy 2 times, if he have Laugh doubles the damage
-    per hit
+  cardDescription: Attack 2 times. If the enemy has laugh, deals double damage
   thingsToShow:
   - {fileID: 2736324593940805766, guid: 7a3e27d63f8b2da41b86056d085c730a, type: 3}

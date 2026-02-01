@@ -140,6 +140,7 @@ public class Player : MonoBehaviour, Turnable
     public void Attack(float damage)
     {
         animator.SetTrigger("Attack");
+        SoundsManager.Instance.PlaySFX(SFXType.Attack);
         nextAttackDamage = damage;
     }
 

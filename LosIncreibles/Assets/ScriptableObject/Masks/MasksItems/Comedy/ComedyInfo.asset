@@ -20,3 +20,4 @@ MonoBehaviour:
     the enemy already have "Laugh", the attack does 5 additional damage and heals
     the player 5 hp.'
   thingsToShow: {fileID: 7421818867751628120, guid: b27c5b88273d1ac46a881031ea1ebf9c, type: 3}
+  debuff: {fileID: 5203831490404342879, guid: 1afc5a1801fb3884093e831f1a8437a6, type: 3}

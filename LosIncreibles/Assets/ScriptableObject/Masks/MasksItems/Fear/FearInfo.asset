@@ -20,3 +20,4 @@ MonoBehaviour:
     starts, gain 5 shield but lose 1 hp, duplicated every turn you have this mask
     equiped.'
   thingsToShow: {fileID: 5721313860763545968, guid: 73ff8219a8fec3342902e4072032553f, type: 3}
+  debuff: {fileID: 5072616222560291554, guid: df1c8ea518f3d974d8acb7c923f36476, type: 3}
