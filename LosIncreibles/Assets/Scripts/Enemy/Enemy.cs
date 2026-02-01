@@ -33,10 +33,12 @@ public class Enemy : MonoBehaviour, Turnable
     public Slider hpUI;
     public Slider shieldUI;
 
+    private Animator animator;
     private void Start()
     {
         currentHP = maxHP;
         currentIcons = new List<IconType>();
+        animator = GetComponent<Animator>();
     }
     private void Update()
     {
@@ -45,7 +47,7 @@ public class Enemy : MonoBehaviour, Turnable
             StartCoroutine(FinishTurn());
 
             if(canPlayThisTurn)
-                AttackPlayer();
+                Attack();
 
             hasActed = true;
         }
@@ -120,6 +122,11 @@ public class Enemy : MonoBehaviour, Turnable
         EndTurn();
     }
 
+    public void Attack()
+    {
+        animator.SetTrigger("Attack");
+    }
+
     public void AttackPlayer()
     {
         Debug.Log("Attacking Player for " + damage + " damage.");
@@ -149,6 +156,8 @@ public class Enemy : MonoBehaviour, Turnable
         }
 
         float effectiveDamage = damage - shield;
+        shield -= damage;
+        if (shield < 0) shield = 0;
         if (effectiveDamage < 0) effectiveDamage = 0;
 
         currentHP -= effectiveDamage;
