@@ -14,8 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   info: {fileID: 11400000, guid: 6b511ea303c70a9499d6ed3e195346e0, type: 2}
   maskType: 0
-  randomNumberOfIntents: 1
-  mysteryMaskTypes: 
+  randomNumberOfIntents: 10
+  mysteryMaskTypes: 000000000100000002000000030000000400000005000000
   poisonStacksPerHit: 2
   damagePerStack: 1
   shieldAmount: 10

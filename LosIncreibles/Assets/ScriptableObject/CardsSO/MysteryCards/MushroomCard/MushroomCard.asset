@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 38d76632b45276f4ea1080a664b6fcc7, type: 3}
   m_Name: MushroomCard
   m_EditorClassIdentifier: 
-  info: {fileID: 0}
+  info: {fileID: 11400000, guid: c4f47cd49550b9b49891e2d5ff9d7610, type: 2}
   maskType: 0
   heal: 15
   damage: 10
