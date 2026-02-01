@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: DefaultToMysteryInfo
   m_EditorClassIdentifier: 
   cardName: To Mystery
-  cardImage: {fileID: -5578413295351007379, guid: 4548da40d5c00a549ae19e846a3edf8e, type: 3}
+  cardImage: {fileID: 21300000, guid: 4548da40d5c00a549ae19e846a3edf8e, type: 3}
   cardDescription: Change Current Mask into Mystery Mask
   thingsToShow: []

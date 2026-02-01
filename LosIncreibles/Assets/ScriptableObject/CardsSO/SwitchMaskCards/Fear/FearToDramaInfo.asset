@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: FearToDramaInfo
   m_EditorClassIdentifier: 
   cardName: Fear To Drama
-  cardImage: {fileID: -357209938018326130, guid: 6cdf63aace9d49849912649fee174b78, type: 3}
+  cardImage: {fileID: 21300000, guid: 6cdf63aace9d49849912649fee174b78, type: 3}
   cardDescription: Change Fear Mask into Drama Mask
   thingsToShow: []
