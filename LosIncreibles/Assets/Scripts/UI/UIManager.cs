@@ -11,7 +11,7 @@ public class UIManager : MonoBehaviour
 {
     [Header("GAME UI")]
     // TO-DO REFERENCIAS A LOS TEXTOS DE VIDA
-    [SerializeField] private GameObject gameUIObject;
+    public GameObject gameUIObject;
      [Header("Hearts")]
     [SerializeField] private Slider playerHealth;
     [SerializeField] private Slider playerShield;

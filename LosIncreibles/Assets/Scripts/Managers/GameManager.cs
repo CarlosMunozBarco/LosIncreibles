@@ -72,6 +72,7 @@ public class GameManager : MonoBehaviour
     public void PlayerDeath()
     {
         UIManager.Instance.ActivateDefeatUI();
+        UIManager.Instance.gameUIObject.SetActive(false);
         StopGame();
     }
 
@@ -82,6 +83,7 @@ public class GameManager : MonoBehaviour
     {
         // activmaos la interfaz de victoria
         UIManager.Instance.ActivateVictoryUI();
+        UIManager.Instance.gameUIObject.SetActive(false);
         // pausamos el juego
         StopGame();
     }
