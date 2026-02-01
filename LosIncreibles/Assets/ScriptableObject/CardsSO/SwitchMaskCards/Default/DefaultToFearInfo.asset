@@ -13,5 +13,6 @@ MonoBehaviour:
   m_Name: DefaultToFearInfo
   m_EditorClassIdentifier: 
   cardName: To Fear
-  cardImage: {fileID: 0}
+  cardImage: {fileID: -9121944557785036459, guid: be11a1f39652deb498fb3f617276bf17, type: 3}
   cardDescription: Change Current Mask into Fear Mask
+  thingsToShow: []

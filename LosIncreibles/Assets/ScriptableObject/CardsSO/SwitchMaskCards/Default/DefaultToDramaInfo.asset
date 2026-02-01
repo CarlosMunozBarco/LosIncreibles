@@ -13,5 +13,6 @@ MonoBehaviour:
   m_Name: DefaultToDramaInfo
   m_EditorClassIdentifier: 
   cardName: To Drama
-  cardImage: {fileID: 0}
+  cardImage: {fileID: -1157575551395170275, guid: cebec0a333a70db4bb8781dec406a536, type: 3}
   cardDescription: Change Current Mask into Drama Mask
+  thingsToShow: []

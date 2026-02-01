@@ -13,5 +13,6 @@ MonoBehaviour:
   m_Name: MysteryToComedyInfo
   m_EditorClassIdentifier: 
   cardName: Mystery To Comedy
-  cardImage: {fileID: 0}
+  cardImage: {fileID: 3443192930177170767, guid: c5c1a65e3f05da64483cf3f06d9d01d8, type: 3}
   cardDescription: Change Mystery Mask into Comedy Mask
+  thingsToShow: []

@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: BehindYouCardInfo
   m_EditorClassIdentifier: 
   cardName: Behind you
-  cardImage: {fileID: 0}
+  cardImage: {fileID: -4991049433946312664, guid: 0a6ec3d3a3ebf61418d8524df65f1a0b, type: 3}
   cardDescription: Lose 10 HP, but gain 20 Shield
   thingsToShow: []

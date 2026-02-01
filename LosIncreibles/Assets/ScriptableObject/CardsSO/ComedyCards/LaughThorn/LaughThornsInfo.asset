@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: LaughThornsInfo
   m_EditorClassIdentifier: 
   cardName: Punchline
-  cardImage: {fileID: 0}
+  cardImage: {fileID: -657743534937632540, guid: 298c27ef3bd19954f976d42b5dcea5ec, type: 3}
   cardDescription: Deals 10 damage to one enemy. if the enemy has Laugh, it gives
     you 5 Thorns
   thingsToShow:

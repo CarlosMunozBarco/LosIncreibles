@@ -13,5 +13,6 @@ MonoBehaviour:
   m_Name: MultipleHitCardInfo
   m_EditorClassIdentifier: 
   cardName: Multiple Hit
-  cardImage: {fileID: 0}
+  cardImage: {fileID: 1756415270896937929, guid: ef749b743b297c84e93149f0d6179448, type: 3}
   cardDescription: Hit all yours enemies 2 times
+  thingsToShow: []
