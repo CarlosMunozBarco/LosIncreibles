@@ -9,9 +9,11 @@ public class SwitchCards : Card
 
     public override void PlayCard()
     {
-        if ((MaskManager.Instance.currentMask.maskInfo.maskType == currentMask.maskInfo.maskType || currentMask.maskInfo.maskType == MaskType.Default) &&
-            MaskManager.Instance.currentMask.maskInfo.maskType != currentMask.maskInfo.maskType)
+        Debug.Log($"Checking condition: {MaskManager.Instance.currentMask.maskInfo.maskType} == {currentMask.maskInfo.maskType} || {currentMask.maskInfo.maskType} == {MaskType.Default}");
+        if ((MaskManager.Instance.currentMask.maskInfo.maskType == currentMask.maskInfo.maskType || currentMask.maskInfo.maskType == MaskType.Default) ||
+            MaskManager.Instance.currentMask.maskInfo.maskType == MaskType.Default)
         {
+            Debug.Log("Switching Mask to: " + nextMask.maskInfo.maskType);
             MaskManager.Instance.ChangeMask(nextMask);
         }
 
