@@ -62,10 +62,20 @@ public class EnemyManager : MonoBehaviour
     private void HandleEnemyDeath(Enemy deadEnemy)
     {
         currentEnemies.Remove(deadEnemy);
+        if(currentEnemies.Count <= 0)
+        {
+            currentWaveIndex++;
+            SpawnWave();
+        }
     }
 
     private void SpawnWave()
     {
+        if(currentWaveIndex >= waves.Count)
+        {
+            Debug.Log("All waves have been spawned.");
+            return;
+        }
         Wave wave = waves[currentWaveIndex];
         if(wave != null)
         {

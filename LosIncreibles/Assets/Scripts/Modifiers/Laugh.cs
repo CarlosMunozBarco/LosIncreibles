@@ -30,6 +30,7 @@ public class Laugh : MonoBehaviour
         if (turn == Turn.Enemy && currentEnemy != null)
         {
             currentEnemy.canPlayThisTurn = false;
+            GetComponent<Animator>().SetTrigger("Laugh");
             Destroy(this);
         }
     }

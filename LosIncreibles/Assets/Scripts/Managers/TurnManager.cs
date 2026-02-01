@@ -101,11 +101,8 @@ public class TurnManager : MonoBehaviour
     private void HandleEnemyDie(Enemy deadEnemy)
     {
         var allEnemies = EnemyManager.Instance.GetAllEnemies();
-        if (allEnemies.Count == 0)
-        {
-            SwapTurn();
-        }
-        else if (currentTurn == Turn.Enemy)
+
+        if (currentTurn == Turn.Enemy)
         {
             if (currentEnemyIndex >= allEnemies.Count)
             {

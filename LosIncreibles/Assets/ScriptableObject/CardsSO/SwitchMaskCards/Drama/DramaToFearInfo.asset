@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6f36b2bc7cde8454a8d6a2ed8bff2905, type: 3}
   m_Name: DramaToFearInfo
   m_EditorClassIdentifier: 
-  cardName: drama tenebroso
+  cardName: Drama To Terror
   cardImage: {fileID: 21300000, guid: 87343a0d82baaac4597898669ad9789d, type: 3}
-  cardDescription: chanche Drama mask to Fear Mask
+  cardDescription: Change Drama Mask into Terror Mask
   thingsToShow: []

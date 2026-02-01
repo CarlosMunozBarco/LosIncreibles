@@ -117,13 +117,14 @@ public class Enemy : MonoBehaviour, Turnable
 
     private IEnumerator FinishTurn()
     {
-        yield return new WaitForSeconds(3f);
+        yield return new WaitForSeconds(2f);
         canPlayThisTurn = true;
         EndTurn();
     }
 
     public void Attack()
     {
+        Debug.Log("Enemy Attacks!");
         animator.SetTrigger("Attack");
         SoundsManager.Instance.PlaySFX(SFXType.Attack);
     }
