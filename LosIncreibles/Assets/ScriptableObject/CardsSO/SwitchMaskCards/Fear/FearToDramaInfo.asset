@@ -10,8 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6f36b2bc7cde8454a8d6a2ed8bff2905, type: 3}
-  m_Name: DramaToFearInfo
+  m_Name: FearToDramaInfo
   m_EditorClassIdentifier: 
-  cardName: drama tenebroso
+  cardName: Fear To Drama
   cardImage: {fileID: 0}
-  cardDescription: 
+  cardDescription: Change Fear Mask into Drama Mask

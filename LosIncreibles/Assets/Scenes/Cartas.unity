@@ -222,6 +222,21 @@ MonoBehaviour:
   - {fileID: 11400000, guid: a31c72e3fff93a44c802f6ae903df1f3, type: 2}
   - {fileID: 11400000, guid: 40a8eb2c911b4604297f5f1846d5a438, type: 2}
   - {fileID: 11400000, guid: 2caa0f320040719428df548be543fac1, type: 2}
+  - {fileID: 11400000, guid: 0301b937163658c449d40d01928c397d, type: 2}
+  - {fileID: 11400000, guid: 18b4d8efe94054f4b83a39e5bfb7b079, type: 2}
+  - {fileID: 11400000, guid: 2bd957f34d14b7347917aaf47183e807, type: 2}
+  - {fileID: 11400000, guid: 7bba090bf510b1945927d66f30a4f202, type: 2}
+  - {fileID: 11400000, guid: 244df1bdafbfea241ae3064685941fa1, type: 2}
+  - {fileID: 11400000, guid: 9b1edc5d18e73ba45a9bef03d3576217, type: 2}
+  - {fileID: 11400000, guid: b94bb3abab1519743b906359e4652248, type: 2}
+  - {fileID: 11400000, guid: d28e80ef6078f0540ae36dc6935573a7, type: 2}
+  - {fileID: 11400000, guid: 9926df4d6a6bf5848b1c463a44090f6f, type: 2}
+  - {fileID: 11400000, guid: 68bd0d89411d29a4d9a9829cfc58db37, type: 2}
+  - {fileID: 11400000, guid: a40c87aa1a0234341a1eb368085130c0, type: 2}
+  - {fileID: 11400000, guid: 806b3b18220116c4f8ddae568442170c, type: 2}
+  - {fileID: 11400000, guid: 7d26992d0bbbfa24daac62b53833f7d7, type: 2}
+  - {fileID: 11400000, guid: fa64cfed58d3cc04b86467e299fdccb1, type: 2}
+  - {fileID: 11400000, guid: 741ee932e47326f41aa9a695fb4055d3, type: 2}
   playerDeck: []
 --- !u!4 &44308924
 Transform:
@@ -765,12 +780,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a85f1cac08ee0a244829c8f3edc1d8fa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  iconsHolder: {fileID: 0}
+  icons: []
   maxHP: 50
   shield: 0
   damage: 15
   dodgeChance: 0
   isBoss: 0
   canPlayThisTurn: 1
+  hpUI: {fileID: 0}
+  shieldUI: {fileID: 0}
 --- !u!212 &1406830114
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1244,9 +1263,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 05cb831e3149498488a8a9d9940fefd2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  iconsHolder: {fileID: 0}
+  icons: []
   maxHP: 100
-  shield: 0
-  dodgeChance: 0
 --- !u!50 &1948980984
 Rigidbody2D:
   serializedVersion: 5

@@ -42,8 +42,11 @@ public class MaskManager : MonoBehaviour
 
     public void EquipMask(Mask newMask)
     {
-        currentMask = newMask;
-        currentMask.ApplyMaskEffect();
+        if (newMask != null)
+        {
+            currentMask = newMask;
+            currentMask.ApplyMaskEffect();
+        }
     }
 
 
