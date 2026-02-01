@@ -171,7 +171,7 @@ public class UIManager : MonoBehaviour
 
     public void UpdateCardsRemainigText(int cardsRemaining)
     {
-        cardsText.text = $"{cardsRemaining.ToString()} / 4";
+        cardsText.text = $"{cardsRemaining.ToString()} / 3";
     }
 
     /// <summary>
