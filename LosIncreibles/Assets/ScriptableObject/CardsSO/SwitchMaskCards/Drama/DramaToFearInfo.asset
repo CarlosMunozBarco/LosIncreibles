@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: DramaToFearInfo
   m_EditorClassIdentifier: 
   cardName: drama tenebroso
-  cardImage: {fileID: -6503821265762354812, guid: c9f262c0d30a0fb46b22a183b7725e1c, type: 3}
+  cardImage: {fileID: 21300000, guid: 87343a0d82baaac4597898669ad9789d, type: 3}
   cardDescription: chanche Drama mask to Fear Mask
   thingsToShow: []
