@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: NormalCardInfo
   m_EditorClassIdentifier: 
   cardName: Rotting Food
-  cardImage: {fileID: 0}
+  cardImage: {fileID: 2758947750998448378, guid: a2c0bc50dbd243f4799b1e17707ea3ad, type: 3}
   cardDescription: Gives one enemy 2 stack of Poison
   thingsToShow:
   - {fileID: 1457099062892637502, guid: f2875246983ce254d9c14882ea458d1d, type: 3}

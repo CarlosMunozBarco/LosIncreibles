@@ -13,5 +13,6 @@ MonoBehaviour:
   m_Name: MysteryToFearInfo
   m_EditorClassIdentifier: 
   cardName: Mystery to Fear
-  cardImage: {fileID: 0}
+  cardImage: {fileID: 8457903716748626467, guid: 78b0618573fcc0749bff11ab53fa4995, type: 3}
   cardDescription: Change Mystery Mask into Fear Mask
+  thingsToShow: []

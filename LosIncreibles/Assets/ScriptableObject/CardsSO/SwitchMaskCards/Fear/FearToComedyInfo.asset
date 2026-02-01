@@ -13,5 +13,6 @@ MonoBehaviour:
   m_Name: FearToComedyInfo
   m_EditorClassIdentifier: 
   cardName: Fear to Comedy
-  cardImage: {fileID: 0}
+  cardImage: {fileID: -3676682858802532815, guid: e7940b0f21affc44cbf36e85ed4d71bc, type: 3}
   cardDescription: Change Fear Mask into Comedy Mask
+  thingsToShow: []

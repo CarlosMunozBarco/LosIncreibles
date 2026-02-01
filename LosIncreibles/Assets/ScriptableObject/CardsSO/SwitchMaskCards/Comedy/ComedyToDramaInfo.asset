@@ -13,5 +13,6 @@ MonoBehaviour:
   m_Name: ComedyToDramaInfo
   m_EditorClassIdentifier: 
   cardName: Comedy to drama
-  cardImage: {fileID: 0}
+  cardImage: {fileID: 6504198100709211428, guid: 8491c7ac217097c47bd024a1684454ae, type: 3}
   cardDescription: Change Comedy Mask into Drama Mask
+  thingsToShow: []

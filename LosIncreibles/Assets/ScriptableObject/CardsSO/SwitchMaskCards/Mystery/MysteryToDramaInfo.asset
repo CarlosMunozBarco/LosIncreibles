@@ -13,5 +13,6 @@ MonoBehaviour:
   m_Name: MysteryToDramaInfo
   m_EditorClassIdentifier: 
   cardName: Mystery to Drama
-  cardImage: {fileID: 0}
+  cardImage: {fileID: -6428887331169871374, guid: 07c2e6b227566ff4fb0db6e8000429dc, type: 3}
   cardDescription: Change Mystery Mask into Drama Mask
+  thingsToShow: []
