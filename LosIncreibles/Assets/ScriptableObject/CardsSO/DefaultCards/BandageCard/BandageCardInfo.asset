@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: BandageCardInfo
   m_EditorClassIdentifier: 
   cardName: BandageCard
-  cardImage: {fileID: 0}
+  cardImage: {fileID: 3610316131404922936, guid: 354e33b0a63a5fc43a59c6464bdd62ad, type: 3}
   cardDescription: Give you 2 bandages
   thingsToShow:
   - {fileID: 2297170197685413898, guid: a03e6e0042fa66d40a1777cfeb76f40e, type: 3}

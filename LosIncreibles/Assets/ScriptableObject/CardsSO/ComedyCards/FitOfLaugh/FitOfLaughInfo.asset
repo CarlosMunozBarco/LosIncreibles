@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: FitOfLaughInfo
   m_EditorClassIdentifier: 
   cardName: Fit Of Laugh
-  cardImage: {fileID: 0}
+  cardImage: {fileID: 4485356933180873974, guid: 3e1e280e483a23b478c5c514da3278a4, type: 3}
   cardDescription: Attack 2 times. If the enemy has laugh, deals double damage
   thingsToShow:
   - {fileID: 2736324593940805766, guid: 7a3e27d63f8b2da41b86056d085c730a, type: 3}

@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 50a920171e2494346bdc1142245fca98
+guid: daa9acad2cfaa2c46aa80ed1b2db3426
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 1488177564287491412
-    second: carta_comedia1_0
+      213: 8006655855245259018
+    second: carta_drama3_destino_cruel_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -126,13 +126,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: carta_comedia1_0
+      name: carta_drama3_destino_cruel_0
       rect:
         serializedVersion: 2
-        x: 624
-        y: 454
-        width: 253
-        height: 286
+        x: 233
+        y: 435
+        width: 232
+        height: 301
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -141,8 +141,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 45ddf0a2c9117a410800000000000000
-      internalID: 1488177564287491412
+      spriteID: a01f1ba441b5d1f60800000000000000
+      internalID: 8006655855245259018
       vertices: []
       indices: 
       edges: []
@@ -161,7 +161,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      carta_comedia1_0: 1488177564287491412
+      carta_drama3_destino_cruel_0: 8006655855245259018
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -310,8 +310,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.25}
   m_AnchorMax: {x: 1, y: 0.75}
-  m_AnchoredPosition: {x: 2.36, y: 0}
-  m_SizeDelta: {x: -14.28, y: 0}
+  m_AnchoredPosition: {x: 2.585, y: 0}
+  m_SizeDelta: {x: -2.55, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &6971878405204160115
 GameObject:
@@ -398,7 +398,7 @@ MonoBehaviour:
   m_MinValue: 0
   m_MaxValue: 1
   m_WholeNumbers: 0
-  m_Value: 0
+  m_Value: 1
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []

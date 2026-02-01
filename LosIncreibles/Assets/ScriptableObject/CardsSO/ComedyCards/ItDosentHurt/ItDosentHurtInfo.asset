@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: ItDosentHurtInfo
   m_EditorClassIdentifier: 
   cardName: It Dosent Hurt
-  cardImage: {fileID: -3582840638758528549, guid: 1af02254f287e294abb8f9e0a24f4f1d, type: 3}
+  cardImage: {fileID: 105380107917419733, guid: 046420b5b311ca140acc04f266ab8bee, type: 3}
   cardDescription: 'Give you 10 shield and 3 poison '
   thingsToShow:
   - {fileID: 1457099062892637502, guid: f2875246983ce254d9c14882ea458d1d, type: 3}
