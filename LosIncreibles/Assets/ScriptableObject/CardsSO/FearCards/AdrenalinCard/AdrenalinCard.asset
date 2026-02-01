@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 826aff6639fa02645946ac981062189d, type: 3}
   m_Name: AdrenalinCard
   m_EditorClassIdentifier: 
-  info: {fileID: 0}
+  info: {fileID: 11400000, guid: 892245d5e40543340bc4e65c30573e81, type: 2}
   maskType: 2
   damage: 20

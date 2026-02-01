@@ -9,7 +9,8 @@ public class SwitchCards : Card
 
     public override void PlayCard()
     {
-        if (MaskManager.Instance.currentMask == currentMask)
+        if (MaskManager.Instance.currentMask == currentMask || currentMask.maskInfo.maskType == MaskType.Default &&
+            MaskManager.Instance.currentMask != currentMask)
         {
             MaskManager.Instance.ChangeMask(nextMask);
         }
