@@ -32,7 +32,7 @@ public class GameManager : MonoBehaviour
     /// <summary>
     /// Metodo que pausa o despausa el juego
     /// </summary>
-    private void StopGame()
+    public void StopGame()
     {
         // alterna el valor -> si es true pasa a falso, si es falso se vuelve true
         isPaused = !isPaused;

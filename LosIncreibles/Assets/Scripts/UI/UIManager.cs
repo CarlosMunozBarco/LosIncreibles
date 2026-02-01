@@ -200,8 +200,8 @@ public class UIManager : MonoBehaviour
     {
         // activamos o desactivamos el menu de pausa
         pauseUIObject.SetActive(isActive);
-        // activamos o desactivamos el menu de juego
-        gameUIObject.SetActive(!isActive);
+        // TO_DO añadimos block screen para evitar interacciones con la ui
+
     }
 
     public void UpdateMaskUI(string maskName)
