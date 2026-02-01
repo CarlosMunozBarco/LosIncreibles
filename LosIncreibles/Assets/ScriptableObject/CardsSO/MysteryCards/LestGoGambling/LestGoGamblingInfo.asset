@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: LestGoGamblingInfo
   m_EditorClassIdentifier: 
   cardName: Lets Go Gambling
-  cardImage: {fileID: 0}
+  cardImage: {fileID: -4439963155860568145, guid: 7528d243828edad4baff94e7568bd71e, type: 3}
   cardDescription: You gain another extra dice at the beggining while u have the
     Mystery Mask
+  thingsToShow: []

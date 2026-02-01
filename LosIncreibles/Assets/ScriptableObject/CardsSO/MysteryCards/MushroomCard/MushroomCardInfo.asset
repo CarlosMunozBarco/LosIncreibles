@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6f36b2bc7cde8454a8d6a2ed8bff2905, type: 3}
   m_Name: MushroomCardInfo
   m_EditorClassIdentifier: 
-  cardName: Mushrooms
-  cardImage: {fileID: 0}
+  cardName: Ramdon Card
+  cardImage: {fileID: -3261198897578464192, guid: 3aa910e68875f9247b44eed8eb006855, type: 3}
   cardDescription: 50% heal 15 hp, 49% lose 10 HP, 1% heal full hp
   thingsToShow: []

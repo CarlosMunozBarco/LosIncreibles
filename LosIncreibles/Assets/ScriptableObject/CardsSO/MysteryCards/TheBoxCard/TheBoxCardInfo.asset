@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: TheBoxCardInfo
   m_EditorClassIdentifier: 
   cardName: The box
-  cardImage: {fileID: 0}
+  cardImage: {fileID: -2683554300199636024, guid: 33658b28f842cec46933c4bcef426f15, type: 3}
   cardDescription: 50% chance to hit enemy. If succes, triggers once more, indefinitely.
   thingsToShow: []

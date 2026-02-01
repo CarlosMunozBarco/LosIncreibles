@@ -13,5 +13,6 @@ MonoBehaviour:
   m_Name: FocusTimeCardInfo
   m_EditorClassIdentifier: 
   cardName: Focus time
-  cardImage: {fileID: 0}
+  cardImage: {fileID: -2899373393766587301, guid: 594887f0a14b4804ba92dd12f9a1c126, type: 3}
   cardDescription: Hit 1 enemy 5 times dealing 3 damage per hit
+  thingsToShow: []

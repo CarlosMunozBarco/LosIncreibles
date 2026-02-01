@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: TheRouletteInfo
   m_EditorClassIdentifier: 
   cardName: The roulette
-  cardImage: {fileID: 0}
+  cardImage: {fileID: -4249804308498951035, guid: e194bea3be23b7e4781ed56e8cd4f162, type: 3}
   cardDescription: Give  random effects 1 to 10 times
   thingsToShow: []
