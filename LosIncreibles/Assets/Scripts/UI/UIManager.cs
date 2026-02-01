@@ -16,7 +16,7 @@ public class UIManager : MonoBehaviour
     [SerializeField] private Slider playerHealth;
     [SerializeField] private Slider playerShield;
     [SerializeField] private TextMeshProUGUI cardsText;
-    private CanvasGroup canvasGroup;
+
 
     [Space(25)]
     [Header("DEFEAT UI")]
@@ -75,7 +75,6 @@ public class UIManager : MonoBehaviour
             // destruimos el objeto
             Destroy(gameObject);
         }
-        if (!canvasGroup) GetComponent<CanvasGroup>();  
     }
     void Start()
     {
@@ -224,9 +223,8 @@ public class UIManager : MonoBehaviour
     public void TogglePauseUI(bool isActive)
     {
         // activamos o desactivamos el menu de pausa
+        Debug.Log(isActive);
         pauseUIObject.SetActive(isActive);
-        gameUIObject.GetComponent<CanvasGroup>().blocksRaycasts = (!isActive);
-
     }
 
     public void UpdateMaskUI()
