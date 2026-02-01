@@ -10,11 +10,22 @@ public class FocusTimeCard : Card
         Attack();
     }
     public async void Attack()
-    {
-        for (int i = 0; i < 5; i++)
+    {   
+        if(MaskManager.Instance.currentMask.maskInfo.maskType == MaskType.Drama)
         {
-            CombatManager.Instance.GetPlayer().Attack(damage);
-            await Task.Delay(300);
+            for (int i = 0; i < 5; i++)
+            {
+                CombatManager.Instance.GetPlayer().Attack(damage + 2);
+                await Task.Delay(300);
+            }
+                
+        }else
+        {
+            for (int i = 0; i < 5; i++)
+            {
+                CombatManager.Instance.GetPlayer().Attack(damage);
+                await Task.Delay(300);
+            }
         }
     }
 }

@@ -8,7 +8,13 @@ public class LaughThorns : Card
     public float damage;
     public override void PlayCard()
     {
-        CombatManager.Instance.GetPlayer().Attack(damage);
+        if(MaskManager.Instance.currentMask.maskInfo.maskType == MaskType.Comedy)
+        {
+            CombatManager.Instance.GetPlayer().Attack(damage + 5);        
+        }else
+        {
+            CombatManager.Instance.GetPlayer().Attack(damage);        
+        }
         if (CombatManager.Instance.GetCurrentEnemy().GetComponent<Laugh>() != null )
         {
             if(CombatManager.Instance.player != null)

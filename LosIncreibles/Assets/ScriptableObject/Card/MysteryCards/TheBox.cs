@@ -20,7 +20,13 @@ public class TheBox : Card
 
     public async void Attack()
     {
-        CombatManager.Instance.GetPlayer().Attack(damage);
+        if(MaskManager.Instance.currentMask.maskInfo.maskType == MaskType.Drama)
+        {
+            CombatManager.Instance.player.Attack(damage + 5);
+        }else
+        {
+            CombatManager.Instance.player.Attack(damage);
+        }
         await Task.Delay(500);
     }
 }

@@ -24,7 +24,13 @@ public class HitDoubleIfPoison : Card
 
     private async void Attack()
     {
-        CombatManager.Instance.GetPlayer().Attack(damage);
+        if(MaskManager.Instance.currentMask.maskInfo.maskType == MaskType.Drama)
+        {
+            CombatManager.Instance.GetPlayer().Attack(damage + 5);        
+        }else
+        {
+            CombatManager.Instance.GetPlayer().Attack(damage); 
+        }
 
         await Task.Delay(500);
     }

@@ -6,6 +6,12 @@ public class AdrenalinCard : Card
     public int damage = 20;
     public override void PlayCard()
     {
-        CombatManager.Instance.player.Attack(damage);
+        if(MaskManager.Instance.currentMask.maskInfo.maskType == MaskType.Terror)
+        {
+            CombatManager.Instance.player.Attack(damage + 5);
+        }else
+        {
+            CombatManager.Instance.player.Attack(damage);
+        }
     }
 }

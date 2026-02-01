@@ -12,19 +12,38 @@ public class MultipleHitCard : Card
     }
      public async void Attack()
     {
-          List<Enemy> enemies = EnemyManager.Instance.GetAllEnemies();
-        for (int i = 0; i < enemies.Count; i++)
+        List<Enemy> enemies = EnemyManager.Instance.GetAllEnemies();
+        if(MaskManager.Instance.currentMask.maskInfo.maskType == MaskType.Drama)
         {
-            enemies[i].TakeDamage(damage);  
-        }
+            for (int i = 0; i < enemies.Count; i++)
+            {
+                enemies[i].TakeDamage(damage);  
+            }
 
-        CombatManager.Instance.player.Attack(0);
-        await Task.Delay(500);
+            CombatManager.Instance.player.Attack(0);
+            await Task.Delay(500);
 
-        for (int i = 0; i < enemies.Count; i++)
+            for (int i = 0; i < enemies.Count; i++)
+            {
+                enemies[i].TakeDamage(damage);  
+            }
+            CombatManager.Instance.player.Attack(0);
+                   
+        }else
         {
-            enemies[i].TakeDamage(damage);  
+             for (int i = 0; i < enemies.Count; i++)
+            {
+                enemies[i].TakeDamage(damage);  
+            }
+
+            CombatManager.Instance.player.Attack(0);
+            await Task.Delay(500);
+
+            for (int i = 0; i < enemies.Count; i++)
+            {
+                enemies[i].TakeDamage(damage);  
+            }
+            CombatManager.Instance.player.Attack(0);
         }
-        CombatManager.Instance.player.Attack(0);
     }
 }
