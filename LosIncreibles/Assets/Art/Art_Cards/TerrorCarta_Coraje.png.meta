@@ -1,0 +1,429 @@
+fileFormatVersion: 2
+guid: ff5911339a954024da1f70f41ea70205
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -1368604763391469619
+    second: TerrorCarta_Coraje_0
+  - first:
+      213: 4194149180047883892
+    second: TerrorCarta_Coraje_1
+  - first:
+      213: -5753796650149570492
+    second: TerrorCarta_Coraje_2
+  - first:
+      213: -1769889259489946808
+    second: TerrorCarta_Coraje_3
+  - first:
+      213: -6998790006331743553
+    second: TerrorCarta_Coraje_4
+  - first:
+      213: -6313621558139396141
+    second: TerrorCarta_Coraje_5
+  - first:
+      213: 5580563548319434536
+    second: TerrorCarta_Coraje_6
+  - first:
+      213: -2569175842671244379
+    second: TerrorCarta_Coraje_7
+  - first:
+      213: -5268203207914964964
+    second: TerrorCarta_Coraje_8
+  - first:
+      213: -4072774430958592293
+    second: TerrorCarta_Coraje_9
+  - first:
+      213: 2473695145241324276
+    second: TerrorCarta_Coraje_10
+  - first:
+      213: -3861659531372116536
+    second: TerrorCarta_Coraje_11
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: TerrorCarta_Coraje_0
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 143
+        width: 65
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dc7d428083db10de0800000000000000
+      internalID: -1368604763391469619
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TerrorCarta_Coraje_1
+      rect:
+        serializedVersion: 2
+        x: 99
+        y: 143
+        width: 65
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 47effbb257c943a30800000000000000
+      internalID: 4194149180047883892
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TerrorCarta_Coraje_2
+      rect:
+        serializedVersion: 2
+        x: 153
+        y: 140
+        width: 11
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 448900e7e686620b0800000000000000
+      internalID: -5753796650149570492
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TerrorCarta_Coraje_3
+      rect:
+        serializedVersion: 2
+        x: 20
+        y: 113
+        width: 51
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 843925488171077e0800000000000000
+      internalID: -1769889259489946808
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TerrorCarta_Coraje_4
+      rect:
+        serializedVersion: 2
+        x: 67
+        y: 125
+        width: 6
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fb2ea07029d4fde90800000000000000
+      internalID: -6998790006331743553
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TerrorCarta_Coraje_5
+      rect:
+        serializedVersion: 2
+        x: 107
+        y: 125
+        width: 6
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3df5ad4d4a28168a0800000000000000
+      internalID: -6313621558139396141
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TerrorCarta_Coraje_6
+      rect:
+        serializedVersion: 2
+        x: 109
+        y: 113
+        width: 51
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 827c218eaf4227d40800000000000000
+      internalID: 5580563548319434536
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TerrorCarta_Coraje_7
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 87
+        width: 13
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5abc014ee24785cd0800000000000000
+      internalID: -2569175842671244379
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TerrorCarta_Coraje_8
+      rect:
+        serializedVersion: 2
+        x: 39
+        y: 103
+        width: 24
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c18b7a3381593e6b0800000000000000
+      internalID: -5268203207914964964
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TerrorCarta_Coraje_9
+      rect:
+        serializedVersion: 2
+        x: 52
+        y: 98
+        width: 15
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bde5b68cb399a77c0800000000000000
+      internalID: -4072774430958592293
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TerrorCarta_Coraje_10
+      rect:
+        serializedVersion: 2
+        x: 113
+        y: 98
+        width: 15
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4faa7bed0a4545220800000000000000
+      internalID: 2473695145241324276
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TerrorCarta_Coraje_11
+      rect:
+        serializedVersion: 2
+        x: 117
+        y: 103
+        width: 24
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8c5401dbd11a86ac0800000000000000
+      internalID: -3861659531372116536
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      TerrorCarta_Coraje_0: -1368604763391469619
+      TerrorCarta_Coraje_1: 4194149180047883892
+      TerrorCarta_Coraje_10: 2473695145241324276
+      TerrorCarta_Coraje_11: -3861659531372116536
+      TerrorCarta_Coraje_2: -5753796650149570492
+      TerrorCarta_Coraje_3: -1769889259489946808
+      TerrorCarta_Coraje_4: -6998790006331743553
+      TerrorCarta_Coraje_5: -6313621558139396141
+      TerrorCarta_Coraje_6: 5580563548319434536
+      TerrorCarta_Coraje_7: -2569175842671244379
+      TerrorCarta_Coraje_8: -5268203207914964964
+      TerrorCarta_Coraje_9: -4072774430958592293
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

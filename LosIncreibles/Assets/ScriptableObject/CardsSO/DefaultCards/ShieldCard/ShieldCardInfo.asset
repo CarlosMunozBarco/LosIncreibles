@@ -13,5 +13,6 @@ MonoBehaviour:
   m_Name: ShieldCardInfo
   m_EditorClassIdentifier: 
   cardName: Shield
-  cardImage: {fileID: 0}
+  cardImage: {fileID: 8680214447004634603, guid: 837886de513afc340bf4ad55d2807359, type: 3}
   cardDescription: Gives you shield (10)
+  thingsToShow: []

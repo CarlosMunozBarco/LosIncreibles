@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: LastChanceCardInfo
   m_EditorClassIdentifier: 
   cardName: LAST CHANCE
-  cardImage: {fileID: 0}
+  cardImage: {fileID: 5972994264112290629, guid: eaa71720cd7c1c34dbfafc5ec25f58e9, type: 3}
   cardDescription: Deal 30 damage. Lose 15 HP.
   thingsToShow: []

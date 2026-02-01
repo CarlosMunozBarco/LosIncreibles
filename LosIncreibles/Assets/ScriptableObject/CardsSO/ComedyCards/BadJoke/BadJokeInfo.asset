@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: BadJokeInfo
   m_EditorClassIdentifier: 
   cardName: Bad Joke
-  cardImage: {fileID: 0}
+  cardImage: {fileID: -3582840638758528549, guid: 1af02254f287e294abb8f9e0a24f4f1d, type: 3}
   cardDescription: Deals damage to 1 enemy. If you are using the Comedy Mask, it
     deals much more damage to all enemies
+  thingsToShow: []

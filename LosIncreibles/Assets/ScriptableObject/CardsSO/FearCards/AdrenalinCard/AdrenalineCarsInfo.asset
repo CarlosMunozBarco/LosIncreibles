@@ -13,5 +13,6 @@ MonoBehaviour:
   m_Name: AdrenalineCarsInfo
   m_EditorClassIdentifier: 
   cardName: Adrenalin
-  cardImage: {fileID: 0}
+  cardImage: {fileID: -1368604763391469619, guid: ff5911339a954024da1f70f41ea70205, type: 3}
   cardDescription: You inlfict 20 damage
+  thingsToShow: []

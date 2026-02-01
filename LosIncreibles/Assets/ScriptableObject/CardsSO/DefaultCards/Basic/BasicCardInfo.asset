@@ -13,5 +13,6 @@ MonoBehaviour:
   m_Name: BasicCardInfo
   m_EditorClassIdentifier: 
   cardName: Basic Card
-  cardImage: {fileID: 0}
+  cardImage: {fileID: 1756415270896937929, guid: ef749b743b297c84e93149f0d6179448, type: 3}
   cardDescription: Deal 10 damage to the current enemy
+  thingsToShow: []
