@@ -64,6 +64,9 @@ public class SoundsManager : MonoBehaviour
             case MusicType.Boss:
                 backgroundMusic.clip = bossMusic;
                 break;
+            case MusicType.Default:
+                backgroundMusic.clip = defaultMusic;
+                break;
         }
         backgroundMusic.Play();
     }

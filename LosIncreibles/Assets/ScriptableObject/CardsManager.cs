@@ -32,7 +32,10 @@ public class CardsManager : MonoBehaviour
         {
             playerDeck = new List<Card>(availableCards);
         }
+
         int randomIndex = Random.Range(0, playerDeck.Count);
-        return playerDeck[randomIndex];
+        Card card = playerDeck[randomIndex];
+        playerDeck.Remove(card);
+        return card;
     }
 }

@@ -10,7 +10,7 @@ public class Deck : MonoBehaviour
     public CardUI cardUI;
     public int cardsPerTurn = 8;
 
-    public int cardsRemainingToPlay = 4;
+    public int cardsRemainingToPlay = 3;
 
     private HorizontalLayoutGroup hlg;
 
@@ -31,7 +31,9 @@ public class Deck : MonoBehaviour
 
     public void RemoveCard(CardUI card)
     {
-        cardsRemainingToPlay--;
+        if(!(card.card is SwitchCards))
+            cardsRemainingToPlay--;
+
         UIManager.Instance.UpdateCardsRemainingText(cardsRemainingToPlay);
         cards.Remove(card);
     }
@@ -49,7 +51,14 @@ public class Deck : MonoBehaviour
     public async void DrawCards()
     {
         hlg.enabled = true;
-        for(int i = cards.Count; i < cardsPerTurn; i++)
+
+
+        cards.Clear();
+        foreach(Transform child in transform)
+        {
+            Destroy(child.gameObject);
+        }
+        for (int i = 0; i < cardsPerTurn; i++)
         {
             Card card = CardsManager.Instance.GetRandomCard();
             CardUI cardUIaux = Instantiate(cardUI, transform);
