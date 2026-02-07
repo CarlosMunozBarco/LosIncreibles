@@ -1,5 +1,6 @@
 using JetBrains.Annotations;
 using System.Collections.Generic;
+using System.Threading.Tasks;
 using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
@@ -30,6 +31,9 @@ public class UIManager : MonoBehaviour
     [Header("PAUSE UI")]
     [SerializeField] private GameObject pauseUIObject;
     private bool pausedGame = false;
+
+    [Header("Bloqueo")]
+    [SerializeField] private GameObject BloqueoUIObject;     
 
     [Header("MASKS")]
     public TMP_Text currentMask;
@@ -235,6 +239,20 @@ public class UIManager : MonoBehaviour
     public void UpdateTurnUI(string turnName)
     {
         turnText.text = turnName;
+    }
+    /// <summary>
+    /// activaremos o desactivaremos el bloqueo dependiendo de quien sea el turno
+    /// </summary>
+    public async void Bloqueo(string turnName)
+    {
+        if (turnName == "YOUR TURN")
+        {
+            await Task.Delay(300);
+            BloqueoUIObject.SetActive(false);
+        } else if (turnName == "ENEMY TURN" )
+        {
+            BloqueoUIObject.SetActive(true);
+        }
     }
 }
 

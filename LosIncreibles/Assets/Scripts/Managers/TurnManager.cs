@@ -115,6 +115,7 @@ public class TurnManager : MonoBehaviour
     {
         string turnName = currentTurn == Turn.Player ? "YOUR TURN" : "ENEMY TURN";
         UIManager.Instance.UpdateTurnUI(turnName);
+        UIManager.Instance.Bloqueo(turnName);
     }
 }
 
