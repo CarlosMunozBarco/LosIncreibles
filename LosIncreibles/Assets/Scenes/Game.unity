@@ -4019,9 +4019,7 @@ MonoBehaviour:
   - {fileID: 1456809150}
   waves:
   - {fileID: 11400000, guid: 9ec4db4d3d0ae394990002e4739a9e1e, type: 2}
-  - {fileID: 11400000, guid: 04ba83074457d9246b3002f40ddd6923, type: 2}
   - {fileID: 11400000, guid: 9546d2320e4fc2241a90e0b10bb926cf, type: 2}
-  - {fileID: 11400000, guid: 59063187257cb6f43b325da904e596ba, type: 2}
   - {fileID: 11400000, guid: 83268807479b5a14787290f7a77fba2a, type: 2}
   currentEnemies: []
 --- !u!4 &1055792891
